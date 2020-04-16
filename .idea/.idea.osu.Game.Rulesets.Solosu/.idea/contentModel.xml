@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\nick_\.nuget\packages\appveyor.testlogger\2.0.0\build\_common\Microsoft.VisualStudio.TestPlatform.Extension.Appveyor.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\nick_\.nuget\packages\appveyor.testlogger\2.0.0\build\_common\Microsoft.VisualStudio.TestPlatform.Extension.Appveyor.TestLogger.dll" t="Include" />
+    <e p="C:\Users\nick_\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\nick_\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\nick_\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\nick_\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\nick_\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nick_\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_osu.Game.Rulesets.Solosu.-261982236.00" t="ExcludeRecursive" />
+    <e p="E:\CSharp\Solosu" t="IncludeFlat">
+      <e p="osu.Game.Rulesets.Solosu" t="IncludeRecursive">
+        <e p="Beatmaps" t="Include">
+          <e p="SolosuBeatmapConverter.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Judgements" t="Include">
+          <e p="ComboResult.cs" t="Include" />
+          <e p="SolosuJudgement.cs" t="Include" />
+        </e>
+        <e p="Mods" t="Include">
+          <e p="SolosuModAutoplay.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="osu.Game.Rulesets.Solosu.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Objects" t="Include">
+          <e p="Drawables" t="Include">
+            <e p="DrawableByte.cs" t="Include" />
+            <e p="DrawableSolosuHitObject.cs" t="Include" />
+            <e p="Pieces" t="Include">
+              <e p="BytePiece.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SolosuBugObject.cs" t="Include" />
+          <e p="SolosuByteObject.cs" t="Include" />
+          <e p="SolosuHitObject.cs" t="Include" />
+          <e p="Types" t="Include">
+            <e p="IHasLane.cs" t="Include" />
+          </e>
+        </e>
+        <e p="osu.Game.Rulesets.Solosu.csproj" t="IncludeRecursive" />
+        <e p="Replays" t="Include">
+          <e p="SolosuAutoGenerator.cs" t="Include" />
+          <e p="SolosuFramedReplayInputHandler.cs" t="Include" />
+          <e p="SolosuReplayFrame.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Samples" t="Include">
+            <e p="Gameplay" t="Include" />
+          </e>
+          <e p="Textures" t="Include" />
+        </e>
+        <e p="Scoring" t="Include">
+          <e p="SolosuHitWindows.cs" t="Include" />
+        </e>
+        <e p="SolosuDifficultyCalculator.cs" t="Include" />
+        <e p="SolosuInputManager.cs" t="Include" />
+        <e p="SolosuRuleset.cs" t="Include" />
+        <e p="UI" t="Include">
+          <e p="DrawableSolosuRuleset.cs" t="Include" />
+          <e p="SolosuPlayfield.cs" t="Include" />
+        </e>
+      </e>
+      <e p="osu.Game.Rulesets.Solosu.sln" t="IncludeFlat" />
+      <e p="osu.Game.Rulesets.Solosu.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="osu.Game.Rulesets.Solosu.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Objects" t="Include">
+          <e p="TestSceneByte.cs" t="Include" />
+        </e>
+        <e p="osu.Game.Rulesets.Solosu.Tests.csproj" t="IncludeRecursive" />
+        <e p="TestSceneOsuGame.cs" t="Include" />
+        <e p="TestSceneOsuPlayer.cs" t="Include" />
+        <e p="VisualTestRunner.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

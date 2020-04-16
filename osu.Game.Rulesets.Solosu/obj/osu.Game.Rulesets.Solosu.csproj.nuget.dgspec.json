@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\CSharp\\Solosu\\osu.Game.Rulesets.Solosu\\osu.Game.Rulesets.Solosu.csproj": {}
+  },
+  "projects": {
+    "E:\\CSharp\\Solosu\\osu.Game.Rulesets.Solosu\\osu.Game.Rulesets.Solosu.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CSharp\\Solosu\\osu.Game.Rulesets.Solosu\\osu.Game.Rulesets.Solosu.csproj",
+        "projectName": "osu.Game.Rulesets.Solosu",
+        "projectPath": "E:\\CSharp\\Solosu\\osu.Game.Rulesets.Solosu\\osu.Game.Rulesets.Solosu.csproj",
+        "packagesPath": "C:\\Users\\nick_\\.nuget\\packages\\",
+        "outputPath": "E:\\CSharp\\Solosu\\osu.Game.Rulesets.Solosu\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\nick_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "ppy.osu.Game": {
+              "target": "Package",
+              "version": "[2020.312.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

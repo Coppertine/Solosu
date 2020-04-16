@@ -1,0 +1,9 @@
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\bin\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.deps.json
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\bin\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.dll
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\bin\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.pdb
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\obj\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.csprojAssemblyReference.cache
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\obj\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.csproj.CoreCompileInputs.cache
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\obj\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.AssemblyInfoInputs.cache
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\obj\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.AssemblyInfo.cs
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\obj\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.dll
+E:\CSharp\Solosu\osu.Game.Rulesets.Solosu\obj\Debug\netstandard2.1\osu.Game.Rulesets.Solosu.pdb
