@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
+using osu.Game.Rulesets.Solosu.Objects.Drawables;
 using osu.Game.Tests.Visual;
 
 namespace osu.Game.Rulesets.Solosu.Tests.Objects
@@ -13,7 +14,7 @@ namespace osu.Game.Rulesets.Solosu.Tests.Objects
     {
         public override IReadOnlyList<Type> RequiredTypes => new[]
         {
-            typeof()
+            typeof(DrawableByte)
         };
     }
 }
