@@ -21,13 +21,12 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables
             {
             });
         }
-        
+
         protected override void OnDirectionChanged(ValueChangedEvent<ScrollingDirection> e)
         {
             base.OnDirectionChanged(e);
 
             bytePiece.Anchor = bytePiece.Origin = e.NewValue == ScrollingDirection.Up ? Anchor.TopCentre : Anchor.BottomCentre;
         }
-
     }
 }
