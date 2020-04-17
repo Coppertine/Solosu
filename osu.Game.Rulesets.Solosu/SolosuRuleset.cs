@@ -39,6 +39,7 @@ namespace osu.Game.Rulesets.Solosu
         }
 
         public override string ShortName => "solosu";
+        public override string PlayingVerb => "Collecting Bytes";
 
         public override IEnumerable<KeyBinding> GetDefaultKeyBindings(int variant = 0) => new[]
         {

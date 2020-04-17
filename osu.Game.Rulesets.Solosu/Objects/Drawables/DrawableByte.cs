@@ -28,5 +28,11 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables
 
             bytePiece.Anchor = bytePiece.Origin = e.NewValue == ScrollingDirection.Up ? Anchor.TopCentre : Anchor.BottomCentre;
         }
+
+        public bool OnPressed(SolosuAction action) => true;
+
+        public void OnReleased(SolosuAction action)
+        {
+        }
     }
 }
