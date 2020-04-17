@@ -2,7 +2,7 @@
 // See the LICENCE file in the repository root for full licence text.
 
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore.Query.Expressions;
+using System.Linq;
 using osu.Framework.Allocation;
 using osu.Framework.Graphics;
 using osu.Game.Rulesets.Objects.Drawables;
@@ -15,7 +15,7 @@ namespace osu.Game.Rulesets.Solosu.UI
     public class SolosuPlayfield : ScrollingPlayfield
     {
         private readonly List<Lane> lanes = new List<Lane>();
-        
+
         [BackgroundDependencyLoader]
         private void load()
         {
@@ -24,7 +24,7 @@ namespace osu.Game.Rulesets.Solosu.UI
                 HitObjectContainer,
             });
         }
-        
+
         public override void Add(DrawableHitObject h) => getLaneByLaneNum(((SolosuHitObject)h.HitObject).Lane).Add(h);
 
         public override bool Remove(DrawableHitObject h) => getLaneByLaneNum(((SolosuHitObject)h.HitObject).Lane).Remove(h);
@@ -32,7 +32,7 @@ namespace osu.Game.Rulesets.Solosu.UI
         private Lane getLaneByLaneNum(int laneNumber)
         {
             // needs to offset to get correct lane (-1 = left, 0 = centre, 1 = right)
-            
+            return lanes.Where((lane => lanes.IndexOf(lane).Equals(laneNumber - 1))).First();
         }
     }
 }
