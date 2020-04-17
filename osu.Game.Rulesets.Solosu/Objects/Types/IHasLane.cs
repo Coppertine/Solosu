@@ -11,6 +11,6 @@ namespace osu.Game.Rulesets.Solosu.Objects.Types
         /// <summary>
         /// The lane which the hit object lies in.
         /// </summary>
-        int Lane { get; }
+        public int Lane { get; set; }
     }
 }
