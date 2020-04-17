@@ -31,8 +31,9 @@ namespace osu.Game.Rulesets.Solosu.UI
 
         protected override ReplayInputHandler CreateReplayInputHandler(Replay replay) => new SolosuFramedReplayInputHandler(replay);
 
-        public override DrawableHitObject<SolosuHitObject> CreateDrawableRepresentation(SolosuHitObject h) => new DrawableSolosuHitObject(h);
+        //TODO: Include other types.
+        public override DrawableHitObject<SolosuHitObject> CreateDrawableRepresentation(SolosuHitObject h) => new DrawableByte((SolosuByteObject)h);
 
-        protected override PassThroughInputManager CreateInputManager() => new SolosuInputManager(Ruleset?.RulesetInfo);
+        protected override PassThroughInputManager CreateInputManager() => new SolosuInputManager(Ruleset?.RulesetInfo, 0);
     }
 }

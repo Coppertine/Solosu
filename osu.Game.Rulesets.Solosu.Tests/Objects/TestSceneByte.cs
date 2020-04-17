@@ -16,5 +16,6 @@ namespace osu.Game.Rulesets.Solosu.Tests.Objects
         {
             typeof(DrawableByte)
         };
+        
     }
 }

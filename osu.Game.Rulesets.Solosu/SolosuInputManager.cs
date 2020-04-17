@@ -9,8 +9,8 @@ namespace osu.Game.Rulesets.Solosu
 {
     public class SolosuInputManager : RulesetInputManager<SolosuAction>
     {
-        public SolosuInputManager(RulesetInfo ruleset)
-            : base(ruleset, 0, SimultaneousBindingMode.Unique)
+        public SolosuInputManager(RulesetInfo ruleset, int variant)
+            : base(ruleset, variant, SimultaneousBindingMode.Unique)
         {
         }
     }

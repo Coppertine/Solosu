@@ -3,9 +3,7 @@
 
 using osu.Framework.Allocation;
 using osu.Framework.Graphics.Primitives;
-using osu.Game.Rulesets.UI;
 using osu.Game.Rulesets.UI.Scrolling;
-using osuTK;
 
 namespace osu.Game.Rulesets.Solosu.UI
 {
@@ -13,9 +11,10 @@ namespace osu.Game.Rulesets.Solosu.UI
     public class Lane : ScrollingPlayfield
     {
         private Line laneLine;
+
         private void load()
         {
-            laneLine = new Line(, );
+            laneLine = new Line();
         }
     }
 }
