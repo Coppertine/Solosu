@@ -3,6 +3,7 @@
 
 using osu.Framework.Allocation;
 using osu.Framework.Bindables;
+using osu.Framework.Graphics;
 using osu.Framework.Graphics.Containers;
 using osu.Framework.Graphics.Shapes;
 using osu.Framework.Input.Bindings;
@@ -21,31 +22,31 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
             MinValue = -1,
             MaxValue = 1
         };
-        
-        private SolosuPlayfield solosuPlayfield;
+
         private Box playerObject;
 
         [BackgroundDependencyLoader]
         private void load(SolosuPlayfield playfield)
         {
-            solosuPlayfield = playfield;
+            Size = new Vector2(SolosuPlayfield.LANE_WIDTH / 1.5f);
             AddInternal(playerObject = new Box
             {
-                Size = new Vector2(10)
+                FillMode = FillMode.Fit,
+                Anchor = Anchor.Centre,
+                Origin = Anchor.Centre,
+                RelativeSizeAxes = Axes.Both,
             });
+            LanePosition.BindValueChanged(e => { this.MoveToX(e.NewValue * SolosuPlayfield.LANE_WIDTH); });
         }
 
-        protected override void Update()
+        public bool OnPressed(SolosuAction action)
         {
-            base.Update();
-            Position = new Vector2(0 + (LanePosition.Value * solosuPlayfield.LaneWidth), 100);
+            return true;
         }
-
-        public bool OnPressed(SolosuAction action) => throw new System.NotImplementedException();
 
         public void OnReleased(SolosuAction action)
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

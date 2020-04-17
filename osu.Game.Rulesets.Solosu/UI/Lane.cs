@@ -2,19 +2,30 @@
 // See the LICENCE file in the repository root for full licence text.
 
 using osu.Framework.Allocation;
-using osu.Framework.Graphics.Primitives;
-using osu.Game.Rulesets.UI.Scrolling;
+using osu.Framework.Graphics;
+using osu.Framework.Graphics.Containers;
+using osu.Framework.Graphics.Shapes;
 
 namespace osu.Game.Rulesets.Solosu.UI
 {
     [Cached]
-    public class Lane : ScrollingPlayfield
+    public class Lane : CompositeDrawable
     {
-        private Line laneLine;
+        private Box lineBox;
 
+        [BackgroundDependencyLoader]
         private void load()
         {
-            laneLine = new Line();
+            InternalChildren = new Drawable[]
+            {
+                lineBox = new Box
+                {
+                    RelativeSizeAxes = Axes.Y,
+                    Width = 0.95f,
+                    Anchor = Anchor.Centre,
+                    Origin = Anchor.Centre,
+                }
+            };
         }
     }
 }
