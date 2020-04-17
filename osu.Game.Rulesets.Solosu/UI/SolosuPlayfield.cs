@@ -14,11 +14,17 @@ namespace osu.Game.Rulesets.Solosu.UI
     [Cached]
     public class SolosuPlayfield : ScrollingPlayfield
     {
-        private readonly List<Lane> lanes = new List<Lane>();
+        private readonly List<Lane> lanes = new List<Lane>
+        {
+            new Lane(),
+            new Lane(),
+            new Lane()
+        };
 
         [BackgroundDependencyLoader]
         private void load()
         {
+            lanes.ForEach(AddInternal);
             AddRangeInternal(new Drawable[]
             {
                 HitObjectContainer,

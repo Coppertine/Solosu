@@ -23,7 +23,11 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables.Pieces
 
             Anchor = Anchor.Centre;
             Origin = Anchor.Centre;
-
+            innerBox = new Box
+            {
+                Size = new Vector2(40),
+                
+            };
         }
     }
 }
