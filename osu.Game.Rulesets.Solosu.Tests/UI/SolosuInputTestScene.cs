@@ -25,8 +25,8 @@ namespace osu.Game.Rulesets.Solosu.Tests.UI
             {
             }
 
-            protected override KeyBindingContainer<SolosuAction> CreateKeyBindingContainer(RulesetInfo ruleset, int variant, SimultaneousBindingMode unique)
-                => new LocalKeyBindingContainer(ruleset, variant, unique);
+            // protected override KeyBindingContainer<SolosuAction> CreateKeyBindingContainer(RulesetInfo ruleset, int variant, SimultaneousBindingMode unique)
+            //     => new LocalKeyBindingContainer(ruleset, variant, unique);
 
             private class LocalKeyBindingContainer : RulesetKeyBindingContainer
             {

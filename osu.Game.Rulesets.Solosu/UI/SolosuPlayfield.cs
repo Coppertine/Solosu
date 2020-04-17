@@ -21,6 +21,8 @@ namespace osu.Game.Rulesets.Solosu.UI
             new Lane()
         };
 
+        public float LaneWidth { get; set; } = 10;
+
         [BackgroundDependencyLoader]
         private void load()
         {
