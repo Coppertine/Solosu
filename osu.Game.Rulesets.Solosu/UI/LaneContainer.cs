@@ -27,8 +27,8 @@ namespace osu.Game.Rulesets.Solosu.UI
             {
                 fill = new FillFlowContainer
                 {
-                    RelativeSizeAxes = Axes.X,
-                    AutoSizeAxes = Axes.Y,
+                    RelativeSizeAxes = Axes.Y,
+                    AutoSizeAxes = Axes.X,
                 },
                 content,
             };
