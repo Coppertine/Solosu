@@ -7,6 +7,7 @@ using osu.Framework.Graphics;
 using osu.Framework.Graphics.Containers;
 using osu.Game.Rulesets.Solosu.UI.Packet;
 using osu.Game.Rulesets.UI.Scrolling;
+using osuTK;
 
 namespace osu.Game.Rulesets.Solosu.UI
 {
@@ -37,20 +38,22 @@ namespace osu.Game.Rulesets.Solosu.UI
                     Origin = Anchor.BottomCentre,
                     Child = new Container
                     {
-                        RelativeSizeAxes = Axes.Y,
-                        AutoSizeAxes = Axes.X,
+                        RelativeSizeAxes = Axes.X,
+                        AutoSizeAxes = Axes.Y,
                         Padding = new MarginPadding
                         {
-                            Left = 200,
-                            Top = LANE_WIDTH / 2,
-                            Bottom = LANE_WIDTH / 2
+
+                            Left = LANE_WIDTH / 2,
+                            Right = LANE_WIDTH
                         },
                         Children = new Drawable[]
                         {
                             HitObjectContainer,
                             packetPlayer = new SolosuPacket()
                             {
-                                Origin = Anchor.Centre,
+                                Anchor = Anchor.BottomCentre,
+                                Origin = Anchor.BottomCentre,
+                                Position = new Vector2(0)
                             }
                         }
                     }

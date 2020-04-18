@@ -44,15 +44,26 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
             switch (action)
             {
                 case SolosuAction.LeftButton:
+                    moveLane(-1);
                     return true;
-                default:
-                    return false;
+
+                case SolosuAction.RightButton:
+                    moveLane(1);
+                    break;
             }
+
+            return false;
         }
 
         public void OnReleased(SolosuAction action)
         {
-            
+            moveLane(0);
         }
+        
+        private void moveLane(int movement)
+        {
+            LanePosition.Value = movement;
+        }
+
     }
 }
