@@ -13,6 +13,11 @@ namespace osu.Game.Rulesets.Solosu.UI
     [Cached]
     public class SolosuPlayfield : ScrollingPlayfield
     {
+        /// <summary>
+        /// Default height of a <see cref="SolosuPlayfield"/> when inside a <see cref="DrawableSolosuRuleset"/>.
+        /// </summary>
+        public const float DEFAULT_WIDTH = 178;
+
         public const float LANE_WIDTH = 70;
         public const int LANE_COUNT = 3;
 

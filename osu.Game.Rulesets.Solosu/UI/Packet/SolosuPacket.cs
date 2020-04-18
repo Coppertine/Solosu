@@ -41,7 +41,13 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
 
         public bool OnPressed(SolosuAction action)
         {
-            return true;
+            switch (action)
+            {
+                case SolosuAction.LeftButton:
+                    return true;
+                default:
+                    return false;
+            }
         }
 
         public void OnReleased(SolosuAction action)

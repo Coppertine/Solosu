@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
+      "DiffPlex/1.6.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETFramework.ReferenceAssemblies": "1.0.0",
+          "NETStandard.Library": "1.6.1",
+          "jnm2.ReferenceAssemblies.net35": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/DiffPlex.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/DiffPlex.dll": {}
+        }
+      },
       "FFmpeg.AutoGen/4.2.2.1": {
         "type": "package",
         "compile": {
@@ -529,13 +543,19 @@
           }
         }
       },
-      "JetBrains.Annotations/2019.1.3": {
+      "JetBrains.Annotations/2020.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/JetBrains.Annotations.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/JetBrains.Annotations.dll": {}
+        }
+      },
+      "jnm2.ReferenceAssemblies.net35/1.0.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
         }
       },
       "ManagedBass/2.0.4": {
@@ -568,20 +588,20 @@
           "lib/netstandard2.0/Markdig.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
+      "Microsoft.CodeAnalysis.Analyzers/3.0.0-beta2.20059.3": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "Microsoft.CodeAnalysis.Common/3.4.0": {
+      "Microsoft.CodeAnalysis.Common/3.5.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "2.9.6",
+          "Microsoft.CodeAnalysis.Analyzers": "3.0.0-beta2.20059.3",
           "System.Collections.Immutable": "1.5.0",
           "System.Memory": "4.5.3",
           "System.Reflection.Metadata": "1.6.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0",
           "System.Text.Encoding.CodePages": "4.5.1",
           "System.Threading.Tasks.Extensions": "4.5.3"
         },
@@ -633,10 +653,10 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp/3.4.0": {
+      "Microsoft.CodeAnalysis.CSharp/3.5.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "[3.4.0]"
+          "Microsoft.CodeAnalysis.Common": "[3.5.0]"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.dll": {}
@@ -698,7 +718,7 @@
           "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
         }
       },
-      "Microsoft.Diagnostics.Runtime/1.1.61812": {
+      "Microsoft.Diagnostics.Runtime/1.1.116301": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Diagnostics.Runtime.dll": {}
@@ -981,6 +1001,9 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
+        "type": "package"
+      },
       "NativeLibraryLoader/1.0.10": {
         "type": "package",
         "dependencies": {
@@ -1032,25 +1055,24 @@
           "build/_._": {}
         }
       },
-      "ppy.osu.Framework/2020.312.0": {
+      "ppy.osu.Framework/2020.411.0": {
         "type": "package",
         "dependencies": {
           "FFmpeg.AutoGen": "4.2.2.1",
-          "JetBrains.Annotations": "2019.1.3",
+          "JetBrains.Annotations": "2020.1.0",
           "ManagedBass": "2.0.4",
           "ManagedBass.Fx": "2.0.1",
           "Markdig": "0.18.3",
-          "Microsoft.CodeAnalysis.CSharp": "3.4.0",
-          "Microsoft.Diagnostics.Runtime": "1.1.61812",
+          "Microsoft.CodeAnalysis.CSharp": "3.5.0",
+          "Microsoft.Diagnostics.Runtime": "1.1.116301",
           "Microsoft.Extensions.ObjectPool": "3.0.3",
           "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
           "SharpFNT": "1.1.0",
           "SixLabors.ImageSharp": "1.0.0-beta0007",
           "StbiSharp": "1.0.11",
-          "Veldrid": "4.7.0",
           "Veldrid.Sdl2": "4.7.0",
-          "ppy.osuTK.NS20": "1.0.149"
+          "ppy.osuTK.NS20": "1.0.153"
         },
         "compile": {
           "lib/netstandard2.1/osu.Framework.dll": {}
@@ -1059,19 +1081,20 @@
           "lib/netstandard2.1/osu.Framework.dll": {}
         }
       },
-      "ppy.osu.Game/2020.312.0": {
+      "ppy.osu.Game/2020.413.0": {
         "type": "package",
         "dependencies": {
+          "DiffPlex": "1.6.1",
           "Humanizer": "2.7.9",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.6",
           "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.2.6",
           "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
-          "Sentry": "2.1.0",
-          "SharpCompress": "0.24.0",
+          "Sentry": "2.1.1",
+          "SharpCompress": "0.25.0",
           "System.ComponentModel.Annotations": "4.7.0",
-          "ppy.osu.Framework": "2020.312.0",
-          "ppy.osu.Game.Resources": "2020.304.0"
+          "ppy.osu.Framework": "2020.411.0",
+          "ppy.osu.Game.Resources": "2020.412.0"
         },
         "compile": {
           "lib/netstandard2.1/osu.Game.dll": {}
@@ -1080,7 +1103,7 @@
           "lib/netstandard2.1/osu.Game.dll": {}
         }
       },
-      "ppy.osu.Game.Resources/2020.304.0": {
+      "ppy.osu.Game.Resources/2020.412.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/osu.Game.Resources.dll": {}
@@ -1089,7 +1112,7 @@
           "lib/netstandard2.0/osu.Game.Resources.dll": {}
         }
       },
-      "ppy.osuTK.NS20/1.0.149": {
+      "ppy.osuTK.NS20/1.0.153": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/osuTK.dll": {}
@@ -1133,12 +1156,12 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Sentry/2.1.0": {
+      "Sentry/2.1.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "Sentry.PlatformAbstractions": "1.1.0",
-          "Sentry.Protocol": "2.1.0",
+          "Sentry.Protocol": "2.1.1",
           "System.Collections.Immutable": "1.5.0"
         },
         "compile": {
@@ -1157,7 +1180,7 @@
           "lib/netstandard2.0/Sentry.PlatformAbstractions.dll": {}
         }
       },
-      "Sentry.Protocol/2.1.0": {
+      "Sentry.Protocol/2.1.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Sentry.Protocol.dll": {}
@@ -1166,68 +1189,16 @@
           "lib/netstandard2.0/Sentry.Protocol.dll": {}
         }
       },
-      "SharpCompress/0.24.0": {
+      "SharpCompress/0.25.0": {
         "type": "package",
         "dependencies": {
-          "System.Text.Encoding.CodePages": "4.5.1"
+          "System.Text.Encoding.CodePages": "4.7.0"
         },
         "compile": {
-          "lib/netstandard2.0/SharpCompress.dll": {}
+          "lib/netstandard2.1/SharpCompress.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SharpCompress.dll": {}
-        }
-      },
-      "SharpDX/4.0.1": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/SharpDX.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.dll": {}
-        }
-      },
-      "SharpDX.D3DCompiler/4.0.1": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "SharpDX": "4.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/SharpDX.D3DCompiler.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.D3DCompiler.dll": {}
-        }
-      },
-      "SharpDX.Direct3D11/4.0.1": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "SharpDX": "4.0.1",
-          "SharpDX.DXGI": "4.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/SharpDX.Direct3D11.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.Direct3D11.dll": {}
-        }
-      },
-      "SharpDX.DXGI/4.0.1": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "SharpDX": "4.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/SharpDX.DXGI.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.DXGI.dll": {}
+          "lib/netstandard2.1/SharpCompress.dll": {}
         }
       },
       "SharpFNT/1.1.0": {
@@ -1716,7 +1687,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -1797,10 +1768,10 @@
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
         }
       },
-      "System.Text.Encoding.CodePages/4.5.1": {
+      "System.Text.Encoding.CodePages/4.7.0": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "compile": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -1851,49 +1822,6 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Veldrid/4.7.0": {
-        "type": "package",
-        "dependencies": {
-          "NativeLibraryLoader": "1.0.10",
-          "SharpDX": "4.0.1",
-          "SharpDX.D3DCompiler": "4.0.1",
-          "SharpDX.DXGI": "4.0.1",
-          "SharpDX.Direct3D11": "4.0.1",
-          "System.Buffers": "4.4.0",
-          "System.Numerics.Vectors": "4.4.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0",
-          "Veldrid.MetalBindings": "4.7.0",
-          "Veldrid.OpenGLBindings": "4.7.0",
-          "Vk": "1.0.22"
-        },
-        "compile": {
-          "lib/netstandard2.0/Veldrid.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Veldrid.dll": {}
-        }
-      },
-      "Veldrid.MetalBindings/4.7.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Veldrid.MetalBindings.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Veldrid.MetalBindings.dll": {}
-        }
-      },
-      "Veldrid.OpenGLBindings/4.7.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Veldrid.OpenGLBindings.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Veldrid.OpenGLBindings.dll": {}
-        }
-      },
       "Veldrid.SDL2/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -1921,22 +1849,29 @@
             "rid": "win-x86"
           }
         }
-      },
-      "Vk/1.0.22": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.4/vk.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.4/vk.dll": {}
-        }
       }
     }
   },
   "libraries": {
+    "DiffPlex/1.6.1": {
+      "sha512": "xIBNCffTi6V21yheZGgrxxJ48SGWWPGLLhjnZlcoc0CcOXT4vWwImsZxTXTMlaODr5/iU9eMIGLKBsvGzQjMcQ==",
+      "type": "package",
+      "path": "diffplex/1.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "diffplex.1.6.1.nupkg.sha512",
+        "diffplex.nuspec",
+        "diffplex_icon.png",
+        "lib/net35/DiffPlex.dll",
+        "lib/net35/DiffPlex.xml",
+        "lib/net40/DiffPlex.dll",
+        "lib/net40/DiffPlex.xml",
+        "lib/netstandard1.0/DiffPlex.dll",
+        "lib/netstandard1.0/DiffPlex.xml"
+      ]
+    },
     "FFmpeg.AutoGen/4.2.2.1": {
       "sha512": "BocU46KjEaDnZZtLv2xb6jHclHzcwYLkuPDb2Sc8tsP83uZVohoZc35VCgpYGXeWFLxMHEoJTINnMRZGKVh3YQ==",
       "type": "package",
@@ -2531,14 +2466,15 @@
         "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll"
       ]
     },
-    "JetBrains.Annotations/2019.1.3": {
-      "sha512": "E0x48BwZJKoNMNCekWGKsV4saQS89lf58ydT2szseV44CMYIbaHXjc7+305WLw6up3ibZN9yH6QdGSZo5tQhLg==",
+    "JetBrains.Annotations/2020.1.0": {
+      "sha512": "kD9D2ey3DGeLbfIzS8PkwLFkcF5vCOLk2rdjgfSxTfpoyovl7gAyoS6yq6T77zo9QgJGaVJ7PO/cSgLopnKlzg==",
       "type": "package",
-      "path": "jetbrains.annotations/2019.1.3",
+      "path": "jetbrains.annotations/2020.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "jetbrains.annotations.2019.1.3.nupkg.sha512",
+        "icon.png",
+        "jetbrains.annotations.2020.1.0.nupkg.sha512",
         "jetbrains.annotations.nuspec",
         "lib/net20/JetBrains.Annotations.dll",
         "lib/net20/JetBrains.Annotations.xml",
@@ -2550,6 +2486,158 @@
         "lib/netstandard2.0/JetBrains.Annotations.xml",
         "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
         "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
+      ]
+    },
+    "jnm2.ReferenceAssemblies.net35/1.0.0": {
+      "sha512": "LNUXo1dWPYGcSt12ZYCGo7Dwt4Fs64FC0hIdtDw3HkQcBBIQGWQXSSr25PFKIGm/mNeZqkg3BI2YttSia5f2+A==",
+      "type": "package",
+      "path": "jnm2.referenceassemblies.net35/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/.NETFramework/v3.5/Accessibility.dll",
+        "build/.NETFramework/v3.5/AspNetMMCExt.dll",
+        "build/.NETFramework/v3.5/CustomMarshalers.dll",
+        "build/.NETFramework/v3.5/IEExecRemote.dll",
+        "build/.NETFramework/v3.5/IEHost.dll",
+        "build/.NETFramework/v3.5/IIEHost.dll",
+        "build/.NETFramework/v3.5/ISymWrapper.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Conversion.v3.5.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Conversion.v3.5.xml",
+        "build/.NETFramework/v3.5/Microsoft.Build.Engine.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Engine.xml",
+        "build/.NETFramework/v3.5/Microsoft.Build.Framework.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Framework.xml",
+        "build/.NETFramework/v3.5/Microsoft.Build.Tasks.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Tasks.v3.5.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Tasks.v3.5.xml",
+        "build/.NETFramework/v3.5/Microsoft.Build.Utilities.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Utilities.v3.5.dll",
+        "build/.NETFramework/v3.5/Microsoft.Build.Utilities.v3.5.xml",
+        "build/.NETFramework/v3.5/Microsoft.Data.Entity.Build.Tasks.dll",
+        "build/.NETFramework/v3.5/Microsoft.Data.Entity.Build.Tasks.xml",
+        "build/.NETFramework/v3.5/Microsoft.JScript.dll",
+        "build/.NETFramework/v3.5/Microsoft.VisualBasic.Compatibility.Data.dll",
+        "build/.NETFramework/v3.5/Microsoft.VisualBasic.Compatibility.dll",
+        "build/.NETFramework/v3.5/Microsoft.VisualBasic.Vsa.dll",
+        "build/.NETFramework/v3.5/Microsoft.VisualBasic.dll",
+        "build/.NETFramework/v3.5/Microsoft.VisualC.Dll",
+        "build/.NETFramework/v3.5/Microsoft.VisualC.STLCLR.dll",
+        "build/.NETFramework/v3.5/Microsoft.VisualC.STLCLR.xml",
+        "build/.NETFramework/v3.5/Microsoft.Vsa.Vb.CodeDOMProcessor.dll",
+        "build/.NETFramework/v3.5/Microsoft.Vsa.dll",
+        "build/.NETFramework/v3.5/Microsoft_VsaVb.dll",
+        "build/.NETFramework/v3.5/PresentationBuildTasks.dll",
+        "build/.NETFramework/v3.5/PresentationCore.dll",
+        "build/.NETFramework/v3.5/PresentationFramework.Aero.dll",
+        "build/.NETFramework/v3.5/PresentationFramework.Classic.dll",
+        "build/.NETFramework/v3.5/PresentationFramework.Luna.dll",
+        "build/.NETFramework/v3.5/PresentationFramework.Royale.dll",
+        "build/.NETFramework/v3.5/PresentationFramework.dll",
+        "build/.NETFramework/v3.5/ReachFramework.dll",
+        "build/.NETFramework/v3.5/RedistList/FrameworkList.xml",
+        "build/.NETFramework/v3.5/Sentinel.v3.5Client.dll",
+        "build/.NETFramework/v3.5/SubsetList/Client.xml",
+        "build/.NETFramework/v3.5/System.AddIn.Contract.dll",
+        "build/.NETFramework/v3.5/System.AddIn.Contract.xml",
+        "build/.NETFramework/v3.5/System.AddIn.dll",
+        "build/.NETFramework/v3.5/System.AddIn.xml",
+        "build/.NETFramework/v3.5/System.ComponentModel.DataAnnotations.dll",
+        "build/.NETFramework/v3.5/System.ComponentModel.DataAnnotations.xml",
+        "build/.NETFramework/v3.5/System.Configuration.Install.dll",
+        "build/.NETFramework/v3.5/System.Core.dll",
+        "build/.NETFramework/v3.5/System.Core.xml",
+        "build/.NETFramework/v3.5/System.Data.DataSetExtensions.dll",
+        "build/.NETFramework/v3.5/System.Data.DataSetExtensions.xml",
+        "build/.NETFramework/v3.5/System.Data.Entity.Design.dll",
+        "build/.NETFramework/v3.5/System.Data.Entity.Design.xml",
+        "build/.NETFramework/v3.5/System.Data.Entity.dll",
+        "build/.NETFramework/v3.5/System.Data.Entity.xml",
+        "build/.NETFramework/v3.5/System.Data.Linq.dll",
+        "build/.NETFramework/v3.5/System.Data.Linq.xml",
+        "build/.NETFramework/v3.5/System.Data.OracleClient.dll",
+        "build/.NETFramework/v3.5/System.Data.Services.Client.dll",
+        "build/.NETFramework/v3.5/System.Data.Services.Client.xml",
+        "build/.NETFramework/v3.5/System.Data.Services.Design.dll",
+        "build/.NETFramework/v3.5/System.Data.Services.Design.xml",
+        "build/.NETFramework/v3.5/System.Data.Services.dll",
+        "build/.NETFramework/v3.5/System.Data.Services.xml",
+        "build/.NETFramework/v3.5/System.Data.SqlXml.dll",
+        "build/.NETFramework/v3.5/System.Data.dll",
+        "build/.NETFramework/v3.5/System.Deployment.dll",
+        "build/.NETFramework/v3.5/System.Design.dll",
+        "build/.NETFramework/v3.5/System.DirectoryServices.AccountManagement.dll",
+        "build/.NETFramework/v3.5/System.DirectoryServices.AccountManagement.xml",
+        "build/.NETFramework/v3.5/System.DirectoryServices.Protocols.dll",
+        "build/.NETFramework/v3.5/System.DirectoryServices.dll",
+        "build/.NETFramework/v3.5/System.Drawing.Design.dll",
+        "build/.NETFramework/v3.5/System.Drawing.dll",
+        "build/.NETFramework/v3.5/System.EnterpriseServices.dll",
+        "build/.NETFramework/v3.5/System.IO.Log.dll",
+        "build/.NETFramework/v3.5/System.IdentityModel.Selectors.dll",
+        "build/.NETFramework/v3.5/System.IdentityModel.dll",
+        "build/.NETFramework/v3.5/System.Management.Instrumentation.dll",
+        "build/.NETFramework/v3.5/System.Management.Instrumentation.xml",
+        "build/.NETFramework/v3.5/System.Management.dll",
+        "build/.NETFramework/v3.5/System.Messaging.dll",
+        "build/.NETFramework/v3.5/System.Net.dll",
+        "build/.NETFramework/v3.5/System.Net.xml",
+        "build/.NETFramework/v3.5/System.Printing.dll",
+        "build/.NETFramework/v3.5/System.Runtime.Remoting.dll",
+        "build/.NETFramework/v3.5/System.Runtime.Serialization.Formatters.Soap.dll",
+        "build/.NETFramework/v3.5/System.Runtime.Serialization.dll",
+        "build/.NETFramework/v3.5/System.Security.dll",
+        "build/.NETFramework/v3.5/System.ServiceModel.Web.dll",
+        "build/.NETFramework/v3.5/System.ServiceModel.Web.xml",
+        "build/.NETFramework/v3.5/System.ServiceModel.dll",
+        "build/.NETFramework/v3.5/System.ServiceProcess.dll",
+        "build/.NETFramework/v3.5/System.Speech.dll",
+        "build/.NETFramework/v3.5/System.Transactions.dll",
+        "build/.NETFramework/v3.5/System.Web.Abstractions.dll",
+        "build/.NETFramework/v3.5/System.Web.Abstractions.xml",
+        "build/.NETFramework/v3.5/System.Web.DynamicData.Design.dll",
+        "build/.NETFramework/v3.5/System.Web.DynamicData.Design.xml",
+        "build/.NETFramework/v3.5/System.Web.DynamicData.dll",
+        "build/.NETFramework/v3.5/System.Web.DynamicData.xml",
+        "build/.NETFramework/v3.5/System.Web.Entity.Design.dll",
+        "build/.NETFramework/v3.5/System.Web.Entity.Design.xml",
+        "build/.NETFramework/v3.5/System.Web.Entity.dll",
+        "build/.NETFramework/v3.5/System.Web.Entity.xml",
+        "build/.NETFramework/v3.5/System.Web.Extensions.Design.dll",
+        "build/.NETFramework/v3.5/System.Web.Extensions.Design.xml",
+        "build/.NETFramework/v3.5/System.Web.Extensions.dll",
+        "build/.NETFramework/v3.5/System.Web.Extensions.xml",
+        "build/.NETFramework/v3.5/System.Web.Mobile.dll",
+        "build/.NETFramework/v3.5/System.Web.RegularExpressions.dll",
+        "build/.NETFramework/v3.5/System.Web.Routing.dll",
+        "build/.NETFramework/v3.5/System.Web.Routing.xml",
+        "build/.NETFramework/v3.5/System.Web.Services.dll",
+        "build/.NETFramework/v3.5/System.Web.dll",
+        "build/.NETFramework/v3.5/System.Windows.Forms.dll",
+        "build/.NETFramework/v3.5/System.Windows.Presentation.dll",
+        "build/.NETFramework/v3.5/System.Windows.Presentation.xml",
+        "build/.NETFramework/v3.5/System.Workflow.Activities.dll",
+        "build/.NETFramework/v3.5/System.Workflow.ComponentModel.dll",
+        "build/.NETFramework/v3.5/System.Workflow.Runtime.dll",
+        "build/.NETFramework/v3.5/System.WorkflowServices.dll",
+        "build/.NETFramework/v3.5/System.WorkflowServices.xml",
+        "build/.NETFramework/v3.5/System.XML.dll",
+        "build/.NETFramework/v3.5/System.Xml.Linq.dll",
+        "build/.NETFramework/v3.5/System.Xml.Linq.xml",
+        "build/.NETFramework/v3.5/System.configuration.dll",
+        "build/.NETFramework/v3.5/System.dll",
+        "build/.NETFramework/v3.5/UIAutomationClient.dll",
+        "build/.NETFramework/v3.5/UIAutomationClientsideProviders.dll",
+        "build/.NETFramework/v3.5/UIAutomationProvider.dll",
+        "build/.NETFramework/v3.5/UIAutomationTypes.dll",
+        "build/.NETFramework/v3.5/WindowsBase.dll",
+        "build/.NETFramework/v3.5/WindowsFormsIntegration.dll",
+        "build/.NETFramework/v3.5/cscompmgd.dll",
+        "build/.NETFramework/v3.5/mscorlib.dll",
+        "build/.NETFramework/v3.5/sysglobl.dll",
+        "build/jnm2.ReferenceAssemblies.net35.targets",
+        "jnm2.referenceassemblies.net35.1.0.0.nupkg.sha512",
+        "jnm2.referenceassemblies.net35.nuspec"
       ]
     },
     "ManagedBass/2.0.4": {
@@ -2603,10 +2691,10 @@
         "markdig.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
-      "sha512": "Kmms3TxGQMNb95Cu/3K+0bIcMnV4qf/phZBLAB0HUi65rBPxP4JO3aM2LoAcb+DFS600RQJMZ7ZLyYDTbLwJOQ==",
+    "Microsoft.CodeAnalysis.Analyzers/3.0.0-beta2.20059.3": {
+      "sha512": "Ve2kXanMNVZp1cIoKbflh3RcQgOYLC4UZ23YIMkOnkA6hQjpXsg9NnXbziR2m4i6+WGSz9Wbxp+Tj7XdNRiITw==",
       "type": "package",
-      "path": "microsoft.codeanalysis.analyzers/2.9.6",
+      "path": "microsoft.codeanalysis.analyzers/3.0.0-beta2.20059.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -2670,7 +2758,7 @@
         "editorconfig/MicrosoftCodeAnalysisPerformanceRulesEnabled/.editorconfig",
         "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
         "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
-        "microsoft.codeanalysis.analyzers.2.9.6.nupkg.sha512",
+        "microsoft.codeanalysis.analyzers.3.0.0-beta2.20059.3.nupkg.sha512",
         "microsoft.codeanalysis.analyzers.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -2699,13 +2787,14 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.CodeAnalysis.Common/3.4.0": {
-      "sha512": "3ncA7cV+iXGA1VYwe2UEZXcvWyZSlbexWjM9AvocP7sik5UD93qt9Hq0fMRGk0jFRmvmE4T2g+bGfXiBVZEhLw==",
+    "Microsoft.CodeAnalysis.Common/3.5.0": {
+      "sha512": "1CjUHyDxhlwDfUSTOwqbNMZ4rk/Pqs33BupWmun8S/DUOou9mDe+MjapK06WjvuhIEyEr3fzyk0bOIwu0n1RYg==",
       "type": "package",
-      "path": "microsoft.codeanalysis.common/3.4.0",
+      "path": "microsoft.codeanalysis.common/3.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "ThirdPartyNotices.rtf",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.pdb",
@@ -2723,17 +2812,18 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "microsoft.codeanalysis.common.3.4.0.nupkg.sha512",
+        "microsoft.codeanalysis.common.3.5.0.nupkg.sha512",
         "microsoft.codeanalysis.common.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.CSharp/3.4.0": {
-      "sha512": "/LsTtgcMN6Tu1oo7/WYbRAHL4/ubXC/miEakwTpcZKJKtFo7D0AK95Hw0dbGxul6C8WJu60v6NP2435TDYZM+Q==",
+    "Microsoft.CodeAnalysis.CSharp/3.5.0": {
+      "sha512": "WSMCz5tAtnmEzgmE20J1tjX7chU9HYDfz8AHmWn4Ek+6PPvPZSoo0GDo4Pbnu1FAf4MnNDN6lMd4nqNPuI9V2A==",
       "type": "package",
-      "path": "microsoft.codeanalysis.csharp/3.4.0",
+      "path": "microsoft.codeanalysis.csharp/3.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "ThirdPartyNotices.rtf",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.pdb",
@@ -2751,7 +2841,7 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "microsoft.codeanalysis.csharp.3.4.0.nupkg.sha512",
+        "microsoft.codeanalysis.csharp.3.5.0.nupkg.sha512",
         "microsoft.codeanalysis.csharp.nuspec"
       ]
     },
@@ -2768,10 +2858,10 @@
         "microsoft.data.sqlite.core.nuspec"
       ]
     },
-    "Microsoft.Diagnostics.Runtime/1.1.61812": {
-      "sha512": "1tbjDlLm/1DRLqBB9T3UZTE+4UT+s93eRlXfY8feMPbA+9boZ5rWMAhJZzcsspfewiTCVp7n1PP06Jd5oYV2Cg==",
+    "Microsoft.Diagnostics.Runtime/1.1.116301": {
+      "sha512": "TvCyytE+XdV0inx6VJmEzsRqU3R58kbOV89FSINQgJ7WqWd7AwBCKYiDjknTrC3FxAHg5Broq72lOied4c4wew==",
       "type": "package",
-      "path": "microsoft.diagnostics.runtime/1.1.61812",
+      "path": "microsoft.diagnostics.runtime/1.1.116301",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2782,7 +2872,7 @@
         "lib/net45/Microsoft.Diagnostics.Runtime.xml",
         "lib/netstandard2.0/Microsoft.Diagnostics.Runtime.dll",
         "lib/netstandard2.0/Microsoft.Diagnostics.Runtime.pdb",
-        "microsoft.diagnostics.runtime.1.1.61812.nupkg.sha512",
+        "microsoft.diagnostics.runtime.1.1.116301.nupkg.sha512",
         "microsoft.diagnostics.runtime.nuspec"
       ]
     },
@@ -3283,6 +3373,17 @@
         "runtime.json"
       ]
     },
+    "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
+      "sha512": "7D2TMufjGiowmt0E941kVoTIS+GTNzaPopuzM1/1LSaJAdJdBrVP0SkZW7AgDd0a2U1DjsIeaKG1wxGVBNLDMw==",
+      "type": "package",
+      "path": "microsoft.netframework.referenceassemblies/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+        "microsoft.netframework.referenceassemblies.nuspec"
+      ]
+    },
     "NativeLibraryLoader/1.0.10": {
       "sha512": "CX6y+nT8EQNdcOq/8nQJ+kKyQDTv+p6Z65n1nFoNvmvWfMlTcmScvabJUY0idMrEXhTJVmSY2L6fsQ7KX6pzLQ==",
       "type": "package",
@@ -3487,10 +3588,10 @@
         "nunit.nuspec"
       ]
     },
-    "ppy.osu.Framework/2020.312.0": {
-      "sha512": "TvwQPGsp7GHGEm8x2UvGPXB6sV6SMtpMC9ZGVsjF3dxuGcHSy6ld7EpfPVjY+uyuABxKwxm3Qtn577tjs1+2yw==",
+    "ppy.osu.Framework/2020.411.0": {
+      "sha512": "2JSQLSEoE59i1Qj/wmkfBr+2jaAxM9KGW1nklaRE+3aHzDkxBTH48A+sHWliOY8e2bwiMuBPlDr2Xs088+ifPw==",
       "type": "package",
-      "path": "ppy.osu.framework/2020.312.0",
+      "path": "ppy.osu.framework/2020.411.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3501,45 +3602,45 @@
         "lib/netstandard2.1/osu.Framework.dll",
         "lib/netstandard2.1/osu.Framework.pdb",
         "lib/netstandard2.1/osu.Framework.xml",
-        "ppy.osu.framework.2020.312.0.nupkg.sha512",
+        "ppy.osu.framework.2020.411.0.nupkg.sha512",
         "ppy.osu.framework.nuspec"
       ]
     },
-    "ppy.osu.Game/2020.312.0": {
-      "sha512": "/RhUETwLZjpan/6Zzgo9WEVzW+Iq/4WSPq/QxTKvavZXPeJBa3OYJ4wu5jN82g2iKrP9QlYIJfLUEqRc+dyiwQ==",
+    "ppy.osu.Game/2020.413.0": {
+      "sha512": "HPR33W3SzCOASMvAofxGPLYeOFt7JevBnakznAoqwJJ/HSmg2dgjomRtduG5k02q7vZGlasnH1RDD+Ao4ZhqAw==",
       "type": "package",
-      "path": "ppy.osu.game/2020.312.0",
+      "path": "ppy.osu.game/2020.413.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/osu.Game.dll",
         "lib/netstandard2.1/osu.Game.xml",
-        "ppy.osu.game.2020.312.0.nupkg.sha512",
+        "ppy.osu.game.2020.413.0.nupkg.sha512",
         "ppy.osu.game.nuspec"
       ]
     },
-    "ppy.osu.Game.Resources/2020.304.0": {
-      "sha512": "HZcTgiAdpmplaQH1gm831qgUh7hQ6gPnV6m4libD+ui/jgw+dgJa9z5LaGyJmwEDLw4vj0vKDiCzmvpWzskQEg==",
+    "ppy.osu.Game.Resources/2020.412.0": {
+      "sha512": "7i3nERoiAb6iiWFtprZaXD/QhLrYej225xDnytD1uYiSB8ZMZmBolxzOTiPw0Ga9CTzEqVgf9i1ywsiB3lazqg==",
       "type": "package",
-      "path": "ppy.osu.game.resources/2020.304.0",
+      "path": "ppy.osu.game.resources/2020.412.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/osu.Game.Resources.dll",
-        "ppy.osu.game.resources.2020.304.0.nupkg.sha512",
+        "ppy.osu.game.resources.2020.412.0.nupkg.sha512",
         "ppy.osu.game.resources.nuspec"
       ]
     },
-    "ppy.osuTK.NS20/1.0.149": {
-      "sha512": "KXHSFyNn62q64SVowBU+A38aYMUliKFnUef2t8o85LnuRNh84BaR5uyUiPeQa0GKmL/xSoUUlm9XZETnb/O0hA==",
+    "ppy.osuTK.NS20/1.0.153": {
+      "sha512": "+X7sCSGtUrxGj9Ge5GbfBgkVielX2eCTmFUVmdkZX8eRSnCx6rGVX+86VRjJboT3VwFmeYTRMa8n8n17QagQ7A==",
       "type": "package",
-      "path": "ppy.osutk.ns20/1.0.149",
+      "path": "ppy.osutk.ns20/1.0.153",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/osuTK.dll",
-        "ppy.osutk.ns20.1.0.149.nupkg.sha512",
+        "ppy.osutk.ns20.1.0.153.nupkg.sha512",
         "ppy.osutk.ns20.nuspec"
       ]
     },
@@ -3577,10 +3678,10 @@
         "runtime.native.system.nuspec"
       ]
     },
-    "Sentry/2.1.0": {
-      "sha512": "/KK8HaTyxgUGDltJHLeU/33ntYupY/3ZkmtXQ9Tu8wVP6H6Exkqe3ZbV39EMM9BWu/8eb+epeVe+C8zEJftKLw==",
+    "Sentry/2.1.1": {
+      "sha512": "meRjG2zD1rh7bL6TJffXRUY4eRZx6oRcKXa9UY3hj1YnflErUJ4Nc1z/9G6kWtq88x8Di8O/iwy/FpaN/8lu3w==",
       "type": "package",
-      "path": "sentry/2.1.0",
+      "path": "sentry/2.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3590,7 +3691,7 @@
         "lib/netstandard2.0/Sentry.dll",
         "lib/netstandard2.0/Sentry.pdb",
         "lib/netstandard2.0/Sentry.xml",
-        "sentry.2.1.0.nupkg.sha512",
+        "sentry.2.1.1.nupkg.sha512",
         "sentry.nuspec"
       ]
     },
@@ -3611,10 +3712,10 @@
         "sentry.platformabstractions.nuspec"
       ]
     },
-    "Sentry.Protocol/2.1.0": {
-      "sha512": "k4870NfpTm8FeDt7IgPjkjkRueDKPhmVpwWERLOu2bq2h3qAk1pyjSG8KnhPP+LqgoNnTRnF3Hw2Qk7Vmd+88g==",
+    "Sentry.Protocol/2.1.1": {
+      "sha512": "w9Es1Ylj+GmuFhPhNae062weYzYGBDlkv93+Bsz9I88Q5zWz5oKq53W92nON54wS8uk7JPNu8c5r0un6a0MnQg==",
       "type": "package",
-      "path": "sentry.protocol/2.1.0",
+      "path": "sentry.protocol/2.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3630,112 +3731,23 @@
         "lib/netstandard2.0/Sentry.Protocol.dll",
         "lib/netstandard2.0/Sentry.Protocol.pdb",
         "lib/netstandard2.0/Sentry.Protocol.xml",
-        "sentry.protocol.2.1.0.nupkg.sha512",
+        "sentry.protocol.2.1.1.nupkg.sha512",
         "sentry.protocol.nuspec"
       ]
     },
-    "SharpCompress/0.24.0": {
-      "sha512": "3zpUOie9xRrEc6o33Z546rseYttnoxVDMC3wsGYsUa5wXas3wTG96v+dHxcGMCta/Kid9jFIl8/Lc/GbNpKZVA==",
+    "SharpCompress/0.25.0": {
+      "sha512": "sP7lD6xB56CjbEVPGNUkTFoH5bEyumJbakUz8uRIQWioKNLzyBHlFVu/5hdSxjYV01AL0RnYhu8aWNgalTJx+A==",
       "type": "package",
-      "path": "sharpcompress/0.24.0",
+      "path": "sharpcompress/0.25.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net35/SharpCompress.dll",
-        "lib/net45/SharpCompress.dll",
-        "lib/netstandard1.0/SharpCompress.dll",
+        "lib/net46/SharpCompress.dll",
         "lib/netstandard1.3/SharpCompress.dll",
         "lib/netstandard2.0/SharpCompress.dll",
-        "sharpcompress.0.24.0.nupkg.sha512",
+        "lib/netstandard2.1/SharpCompress.dll",
+        "sharpcompress.0.25.0.nupkg.sha512",
         "sharpcompress.nuspec"
-      ]
-    },
-    "SharpDX/4.0.1": {
-      "sha512": "8YA1VFg1/K8Emb8FEZDobojcv1BLuppVo7CRJQEgA1V748VIMPBru0i0OnsCjLSThzTn7juOvH85qjFL9Grl1w==",
-      "type": "package",
-      "path": "sharpdx/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/SharpDX.dll",
-        "lib/net40/SharpDX.xml",
-        "lib/net45/SharpDX.dll",
-        "lib/net45/SharpDX.xml",
-        "lib/netcoreapp1.0/SharpDX.dll",
-        "lib/netcoreapp1.0/SharpDX.xml",
-        "lib/netstandard1.1/SharpDX.dll",
-        "lib/netstandard1.1/SharpDX.xml",
-        "lib/uap10.0/SharpDX.dll",
-        "lib/uap10.0/SharpDX.pri",
-        "lib/uap10.0/SharpDX.xml",
-        "sharpdx.4.0.1.nupkg.sha512",
-        "sharpdx.nuspec"
-      ]
-    },
-    "SharpDX.D3DCompiler/4.0.1": {
-      "sha512": "D3OzwToJ8j8dDOeJxUGUxJFwSnTQ89jJejSQkhuIsaBGh8Wd8DhQzmcsKzQaoLnzLBECS1Y37y9bGQaw3CnhxA==",
-      "type": "package",
-      "path": "sharpdx.d3dcompiler/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/SharpDX.D3DCompiler.dll",
-        "lib/net40/SharpDX.D3DCompiler.xml",
-        "lib/net45/SharpDX.D3DCompiler.dll",
-        "lib/net45/SharpDX.D3DCompiler.xml",
-        "lib/netcoreapp1.0/SharpDX.D3DCompiler.dll",
-        "lib/netcoreapp1.0/SharpDX.D3DCompiler.xml",
-        "lib/netstandard1.1/SharpDX.D3DCompiler.dll",
-        "lib/netstandard1.1/SharpDX.D3DCompiler.xml",
-        "lib/uap10.0/SharpDX.D3DCompiler.dll",
-        "lib/uap10.0/SharpDX.D3DCompiler.pri",
-        "lib/uap10.0/SharpDX.D3DCompiler.xml",
-        "sharpdx.d3dcompiler.4.0.1.nupkg.sha512",
-        "sharpdx.d3dcompiler.nuspec"
-      ]
-    },
-    "SharpDX.Direct3D11/4.0.1": {
-      "sha512": "7xIfeAhxPhbPgSiREfFbOOwIWonUt2GHR7XZN5p2DJMWuqjl0+h1oo2/sF+SH/c6D6APjdbt0J+dYSzoV0PA/w==",
-      "type": "package",
-      "path": "sharpdx.direct3d11/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/SharpDX.Direct3D11.dll",
-        "lib/net40/SharpDX.Direct3D11.xml",
-        "lib/net45/SharpDX.Direct3D11.dll",
-        "lib/net45/SharpDX.Direct3D11.xml",
-        "lib/netcoreapp1.0/SharpDX.Direct3D11.dll",
-        "lib/netcoreapp1.0/SharpDX.Direct3D11.xml",
-        "lib/netstandard1.1/SharpDX.Direct3D11.dll",
-        "lib/netstandard1.1/SharpDX.Direct3D11.xml",
-        "lib/uap10.0/SharpDX.Direct3D11.dll",
-        "lib/uap10.0/SharpDX.Direct3D11.pri",
-        "lib/uap10.0/SharpDX.Direct3D11.xml",
-        "sharpdx.direct3d11.4.0.1.nupkg.sha512",
-        "sharpdx.direct3d11.nuspec"
-      ]
-    },
-    "SharpDX.DXGI/4.0.1": {
-      "sha512": "Av/kToUkVR1tDtIP9zmDGwCuCtyL04+PP7kes6aABzky1Y9vT03kR7mDeE83gl+E8GUmMMbVXbQ4AG2CVb66sg==",
-      "type": "package",
-      "path": "sharpdx.dxgi/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/SharpDX.DXGI.dll",
-        "lib/net40/SharpDX.DXGI.xml",
-        "lib/net45/SharpDX.DXGI.dll",
-        "lib/net45/SharpDX.DXGI.xml",
-        "lib/netcoreapp1.0/SharpDX.DXGI.dll",
-        "lib/netcoreapp1.0/SharpDX.DXGI.xml",
-        "lib/netstandard1.1/SharpDX.DXGI.dll",
-        "lib/netstandard1.1/SharpDX.DXGI.xml",
-        "lib/uap10.0/SharpDX.DXGI.dll",
-        "lib/uap10.0/SharpDX.DXGI.pri",
-        "lib/uap10.0/SharpDX.DXGI.xml",
-        "sharpdx.dxgi.4.0.1.nupkg.sha512",
-        "sharpdx.dxgi.nuspec"
       ]
     },
     "SharpFNT/1.1.0": {
@@ -5400,10 +5412,10 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
-      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+    "System.Runtime.CompilerServices.Unsafe/4.7.0": {
+      "sha512": "IpU1lcHz8/09yDr9N+Juc7SCgNUz+RohkCQI+KsWKR67XxpFr8Z6c8t1iENCXZuRuNCc4HBwme/MDHNVCwyAKg==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "path": "system.runtime.compilerservices.unsafe/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5419,7 +5431,7 @@
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5731,10 +5743,10 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/4.5.1": {
-      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
+    "System.Text.Encoding.CodePages/4.7.0": {
+      "sha512": "aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
       "type": "package",
-      "path": "system.text.encoding.codepages/4.5.1",
+      "path": "system.text.encoding.codepages/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5744,8 +5756,10 @@
         "lib/MonoTouch10/_._",
         "lib/net46/System.Text.Encoding.CodePages.dll",
         "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.xml",
         "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -5757,10 +5771,13 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.xml",
         "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "system.text.encoding.codepages.4.5.1.nupkg.sha512",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.4.7.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5938,46 +5955,6 @@
         "version.txt"
       ]
     },
-    "Veldrid/4.7.0": {
-      "sha512": "9SPpjfDyPD5pd68Gv0XZxCVOeaSgGxsdr2jT+l7YvUJZ+uObgiLKLzDSbRi4zMbJ6atqgsIkkY7H3INGbMzc4A==",
-      "type": "package",
-      "path": "veldrid/4.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Veldrid.dll",
-        "lib/netstandard2.0/Veldrid.pdb",
-        "lib/netstandard2.0/Veldrid.xml",
-        "veldrid.4.7.0.nupkg.sha512",
-        "veldrid.nuspec"
-      ]
-    },
-    "Veldrid.MetalBindings/4.7.0": {
-      "sha512": "i9p/eAsEkMPoyNBzz76WrHy2mZXsKyUOjIS3GDrk1C512tillnhtYJ2LDCkwCnM0f9OpGtI9nC3UhDhSXUJt8g==",
-      "type": "package",
-      "path": "veldrid.metalbindings/4.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Veldrid.MetalBindings.dll",
-        "lib/netstandard2.0/Veldrid.MetalBindings.pdb",
-        "veldrid.metalbindings.4.7.0.nupkg.sha512",
-        "veldrid.metalbindings.nuspec"
-      ]
-    },
-    "Veldrid.OpenGLBindings/4.7.0": {
-      "sha512": "PyWk2jyj+VaiWG3rzPtJtgJ18LBKYmShiZRBHrRVPgl7S21GGVt2t/T6ylbER5u5VoMrR87E+RfcJV19S+MuPQ==",
-      "type": "package",
-      "path": "veldrid.openglbindings/4.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Veldrid.OpenGLBindings.dll",
-        "lib/netstandard2.0/Veldrid.OpenGLBindings.pdb",
-        "veldrid.openglbindings.4.7.0.nupkg.sha512",
-        "veldrid.openglbindings.nuspec"
-      ]
-    },
     "Veldrid.SDL2/4.7.0": {
       "sha512": "CMZe8NbkdF+1bEucbrZBHRom0s4scrj/Saz5RFrpoeBA+u43CGT4LAxZuNpvR0PENNdc5sBW3Fq64X4vshYagw==",
       "type": "package",
@@ -5995,23 +5972,11 @@
         "veldrid.sdl2.4.7.0.nupkg.sha512",
         "veldrid.sdl2.nuspec"
       ]
-    },
-    "Vk/1.0.22": {
-      "sha512": "sVfG2tYyu4k5vkAsn3FcqqW+EL3G0eyLDUsDmMUXuf2puNnhr3z1iA5H0DOzUiYfzRwAeEmPcZNp4pqv8uTvhg==",
-      "type": "package",
-      "path": "vk/1.0.22",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard1.4/vk.dll",
-        "vk.1.0.22.nupkg.sha512",
-        "vk.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "ppy.osu.Game >= 2020.312.0"
+      "ppy.osu.Game >= 2020.413.0"
     ]
   },
   "packageFolders": {
@@ -6060,7 +6025,7 @@
         "dependencies": {
           "ppy.osu.Game": {
             "target": "Package",
-            "version": "[2020.312.0, )"
+            "version": "[2020.413.0, )"
           }
         },
         "imports": [

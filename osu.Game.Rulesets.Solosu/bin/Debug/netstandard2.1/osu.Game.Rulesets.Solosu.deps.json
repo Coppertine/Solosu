@@ -9,10 +9,23 @@
     ".NETStandard,Version=v2.1/": {
       "osu.Game.Rulesets.Solosu/1.0.0": {
         "dependencies": {
-          "ppy.osu.Game": "2020.312.0"
+          "ppy.osu.Game": "2020.413.0"
         },
         "runtime": {
           "osu.Game.Rulesets.Solosu.dll": {}
+        }
+      },
+      "DiffPlex/1.6.1": {
+        "dependencies": {
+          "Microsoft.NETFramework.ReferenceAssemblies": "1.0.0",
+          "NETStandard.Library": "2.0.0",
+          "jnm2.ReferenceAssemblies.net35": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/DiffPlex.dll": {
+            "assemblyVersion": "1.6.1.0",
+            "fileVersion": "1.6.1.0"
+          }
         }
       },
       "FFmpeg.AutoGen/4.2.2.1": {
@@ -497,14 +510,15 @@
           }
         }
       },
-      "JetBrains.Annotations/2019.1.3": {
+      "JetBrains.Annotations/2020.1.0": {
         "runtime": {
           "lib/netstandard2.0/JetBrains.Annotations.dll": {
-            "assemblyVersion": "2019.1.3.0",
-            "fileVersion": "2019.1.3.0"
+            "assemblyVersion": "2020.1.0.0",
+            "fileVersion": "2020.1.0.0"
           }
         }
       },
+      "jnm2.ReferenceAssemblies.net35/1.0.0": {},
       "ManagedBass/2.0.4": {
         "runtime": {
           "lib/netstandard1.4/ManagedBass.dll": {
@@ -532,21 +546,21 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.Analyzers/2.9.6": {},
-      "Microsoft.CodeAnalysis.Common/3.4.0": {
+      "Microsoft.CodeAnalysis.Analyzers/3.0.0-beta2.20059.3": {},
+      "Microsoft.CodeAnalysis.Common/3.5.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "2.9.6",
+          "Microsoft.CodeAnalysis.Analyzers": "3.0.0-beta2.20059.3",
           "System.Collections.Immutable": "1.5.0",
           "System.Memory": "4.5.3",
           "System.Reflection.Metadata": "1.6.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
-          "System.Text.Encoding.CodePages": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0",
+          "System.Text.Encoding.CodePages": "4.7.0",
           "System.Threading.Tasks.Extensions": "4.5.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.dll": {
-            "assemblyVersion": "3.4.0.0",
-            "fileVersion": "3.400.19.56804"
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.500.20.15305"
           }
         },
         "resources": {
@@ -591,14 +605,14 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp/3.4.0": {
+      "Microsoft.CodeAnalysis.CSharp/3.5.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "3.4.0"
+          "Microsoft.CodeAnalysis.Common": "3.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.dll": {
-            "assemblyVersion": "3.4.0.0",
-            "fileVersion": "3.400.19.56804"
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.500.20.15305"
           }
         },
         "resources": {
@@ -654,11 +668,11 @@
           }
         }
       },
-      "Microsoft.Diagnostics.Runtime/1.1.61812": {
+      "Microsoft.Diagnostics.Runtime/1.1.116301": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.Diagnostics.Runtime.dll": {
-            "assemblyVersion": "1.1.1.11812",
-            "fileVersion": "1.1.1.11812"
+            "assemblyVersion": "1.1.2.16301",
+            "fileVersion": "1.1.2.16301"
           }
         }
       },
@@ -876,7 +890,7 @@
       "Microsoft.Extensions.Primitives/2.2.0": {
         "dependencies": {
           "System.Memory": "4.5.3",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
@@ -888,6 +902,7 @@
       "Microsoft.Net.Compilers.Toolset/3.1.0": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.0.1": {},
+      "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {},
       "NativeLibraryLoader/1.0.10": {
         "dependencies": {
           "Microsoft.Extensions.DependencyModel": "2.1.0"
@@ -923,61 +938,61 @@
           }
         }
       },
-      "ppy.osu.Framework/2020.312.0": {
+      "ppy.osu.Framework/2020.411.0": {
         "dependencies": {
           "FFmpeg.AutoGen": "4.2.2.1",
-          "JetBrains.Annotations": "2019.1.3",
+          "JetBrains.Annotations": "2020.1.0",
           "ManagedBass": "2.0.4",
           "ManagedBass.Fx": "2.0.1",
           "Markdig": "0.18.3",
-          "Microsoft.CodeAnalysis.CSharp": "3.4.0",
-          "Microsoft.Diagnostics.Runtime": "1.1.61812",
+          "Microsoft.CodeAnalysis.CSharp": "3.5.0",
+          "Microsoft.Diagnostics.Runtime": "1.1.116301",
           "Microsoft.Extensions.ObjectPool": "3.0.3",
           "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
           "SharpFNT": "1.1.0",
           "SixLabors.ImageSharp": "1.0.0-beta0007",
           "StbiSharp": "1.0.11",
-          "Veldrid": "4.7.0",
           "Veldrid.SDL2": "4.7.0",
-          "ppy.osuTK.NS20": "1.0.149"
+          "ppy.osuTK.NS20": "1.0.153"
         },
         "runtime": {
           "lib/netstandard2.1/osu.Framework.dll": {
-            "assemblyVersion": "2020.312.0.0",
-            "fileVersion": "2020.312.0.0"
+            "assemblyVersion": "2020.411.0.0",
+            "fileVersion": "2020.411.0.0"
           }
         }
       },
-      "ppy.osu.Game/2020.312.0": {
+      "ppy.osu.Game/2020.413.0": {
         "dependencies": {
+          "DiffPlex": "1.6.1",
           "Humanizer": "2.7.9",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.6",
           "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.2.6",
           "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
-          "Sentry": "2.1.0",
-          "SharpCompress": "0.24.0",
+          "Sentry": "2.1.1",
+          "SharpCompress": "0.25.0",
           "System.ComponentModel.Annotations": "4.7.0",
-          "ppy.osu.Framework": "2020.312.0",
-          "ppy.osu.Game.Resources": "2020.304.0"
+          "ppy.osu.Framework": "2020.411.0",
+          "ppy.osu.Game.Resources": "2020.412.0"
         },
         "runtime": {
           "lib/netstandard2.1/osu.Game.dll": {
-            "assemblyVersion": "2020.312.0.0",
-            "fileVersion": "2020.312.0.0"
+            "assemblyVersion": "2020.413.0.0",
+            "fileVersion": "2020.413.0.0"
           }
         }
       },
-      "ppy.osu.Game.Resources/2020.304.0": {
+      "ppy.osu.Game.Resources/2020.412.0": {
         "runtime": {
           "lib/netstandard2.0/osu.Game.Resources.dll": {
-            "assemblyVersion": "2020.304.0.0",
-            "fileVersion": "2020.304.0.0"
+            "assemblyVersion": "2020.412.0.0",
+            "fileVersion": "2020.412.0.0"
           }
         }
       },
-      "ppy.osuTK.NS20/1.0.149": {
+      "ppy.osuTK.NS20/1.0.153": {
         "runtime": {
           "lib/netstandard2.0/osuTK.dll": {
             "assemblyVersion": "0.0.0.0",
@@ -1012,17 +1027,17 @@
           "Microsoft.NETCore.Targets": "1.0.1"
         }
       },
-      "Sentry/2.1.0": {
+      "Sentry/2.1.1": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "Sentry.PlatformAbstractions": "1.1.0",
-          "Sentry.Protocol": "2.1.0",
+          "Sentry.Protocol": "2.1.1",
           "System.Collections.Immutable": "1.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Sentry.dll": {
-            "assemblyVersion": "2.1.0.0",
-            "fileVersion": "2.1.0.0"
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.0"
           }
         }
       },
@@ -1034,70 +1049,22 @@
           }
         }
       },
-      "Sentry.Protocol/2.1.0": {
+      "Sentry.Protocol/2.1.1": {
         "runtime": {
           "lib/netstandard2.0/Sentry.Protocol.dll": {
-            "assemblyVersion": "2.1.0.0",
-            "fileVersion": "2.1.0.0"
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.0"
           }
         }
       },
-      "SharpCompress/0.24.0": {
+      "SharpCompress/0.25.0": {
         "dependencies": {
-          "System.Text.Encoding.CodePages": "4.5.1"
+          "System.Text.Encoding.CodePages": "4.7.0"
         },
         "runtime": {
-          "lib/netstandard2.0/SharpCompress.dll": {
-            "assemblyVersion": "0.24.0.0",
-            "fileVersion": "0.24.0.0"
-          }
-        }
-      },
-      "SharpDX/4.0.1": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.0"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
-          }
-        }
-      },
-      "SharpDX.D3DCompiler/4.0.1": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.0",
-          "SharpDX": "4.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.D3DCompiler.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
-          }
-        }
-      },
-      "SharpDX.Direct3D11/4.0.1": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.0",
-          "SharpDX": "4.0.1",
-          "SharpDX.DXGI": "4.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.Direct3D11.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
-          }
-        }
-      },
-      "SharpDX.DXGI/4.0.1": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.0",
-          "SharpDX": "4.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SharpDX.DXGI.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
+          "lib/netstandard2.1/SharpCompress.dll": {
+            "assemblyVersion": "0.25.0.0",
+            "fileVersion": "0.25.0.0"
           }
         }
       },
@@ -1117,7 +1084,7 @@
           "System.Buffers": "4.4.0",
           "System.Memory": "4.5.3",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/SixLabors.Core.dll": {
@@ -1130,7 +1097,7 @@
         "dependencies": {
           "Microsoft.Net.Compilers.Toolset": "3.1.0",
           "SixLabors.Core": "1.0.0-beta0008",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/SixLabors.ImageSharp.dll": {
@@ -1370,7 +1337,7 @@
         "dependencies": {
           "System.Buffers": "4.4.0",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/System.Memory.dll": {
@@ -1506,11 +1473,11 @@
           "Microsoft.NETCore.Targets": "1.0.1"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "assemblyVersion": "4.0.4.1",
-            "fileVersion": "4.6.26919.2"
+            "assemblyVersion": "4.0.6.0",
+            "fileVersion": "4.700.19.56404"
           }
         }
       },
@@ -1556,14 +1523,14 @@
           "System.Runtime": "4.1.0"
         }
       },
-      "System.Text.Encoding.CodePages/4.5.1": {
+      "System.Text.Encoding.CodePages/4.7.0": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
-            "assemblyVersion": "4.1.1.0",
-            "fileVersion": "4.6.27129.4"
+            "assemblyVersion": "4.1.3.0",
+            "fileVersion": "4.700.19.56404"
           }
         }
       },
@@ -1588,7 +1555,7 @@
       },
       "System.Threading.Tasks.Extensions/4.5.3": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
@@ -1597,67 +1564,16 @@
           }
         }
       },
-      "Veldrid/4.7.0": {
-        "dependencies": {
-          "NativeLibraryLoader": "1.0.10",
-          "SharpDX": "4.0.1",
-          "SharpDX.D3DCompiler": "4.0.1",
-          "SharpDX.DXGI": "4.0.1",
-          "SharpDX.Direct3D11": "4.0.1",
-          "System.Buffers": "4.4.0",
-          "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
-          "Veldrid.MetalBindings": "4.7.0",
-          "Veldrid.OpenGLBindings": "4.7.0",
-          "Vk": "1.0.22"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Veldrid.dll": {
-            "assemblyVersion": "4.7.0.0",
-            "fileVersion": "4.7.0.15"
-          }
-        }
-      },
-      "Veldrid.MetalBindings/4.7.0": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Veldrid.MetalBindings.dll": {
-            "assemblyVersion": "4.7.0.0",
-            "fileVersion": "4.7.0.15"
-          }
-        }
-      },
-      "Veldrid.OpenGLBindings/4.7.0": {
-        "runtime": {
-          "lib/netstandard2.0/Veldrid.OpenGLBindings.dll": {
-            "assemblyVersion": "4.7.0.0",
-            "fileVersion": "4.7.0.15"
-          }
-        }
-      },
       "Veldrid.SDL2/4.7.0": {
         "dependencies": {
           "NativeLibraryLoader": "1.0.10",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/Veldrid.SDL2.dll": {
             "assemblyVersion": "4.7.0.0",
             "fileVersion": "4.7.0.15"
-          }
-        }
-      },
-      "Vk/1.0.22": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.0"
-        },
-        "runtime": {
-          "lib/netstandard1.4/vk.dll": {
-            "assemblyVersion": "1.0.22.0",
-            "fileVersion": "1.0.22.0"
           }
         }
       }
@@ -1668,6 +1584,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DiffPlex/1.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xIBNCffTi6V21yheZGgrxxJ48SGWWPGLLhjnZlcoc0CcOXT4vWwImsZxTXTMlaODr5/iU9eMIGLKBsvGzQjMcQ==",
+      "path": "diffplex/1.6.1",
+      "hashPath": "diffplex.1.6.1.nupkg.sha512"
     },
     "FFmpeg.AutoGen/4.2.2.1": {
       "type": "package",
@@ -1984,12 +1907,19 @@
       "path": "humanizer.core.zh-hant/2.7.9",
       "hashPath": "humanizer.core.zh-hant.2.7.9.nupkg.sha512"
     },
-    "JetBrains.Annotations/2019.1.3": {
+    "JetBrains.Annotations/2020.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-E0x48BwZJKoNMNCekWGKsV4saQS89lf58ydT2szseV44CMYIbaHXjc7+305WLw6up3ibZN9yH6QdGSZo5tQhLg==",
-      "path": "jetbrains.annotations/2019.1.3",
-      "hashPath": "jetbrains.annotations.2019.1.3.nupkg.sha512"
+      "sha512": "sha512-kD9D2ey3DGeLbfIzS8PkwLFkcF5vCOLk2rdjgfSxTfpoyovl7gAyoS6yq6T77zo9QgJGaVJ7PO/cSgLopnKlzg==",
+      "path": "jetbrains.annotations/2020.1.0",
+      "hashPath": "jetbrains.annotations.2020.1.0.nupkg.sha512"
+    },
+    "jnm2.ReferenceAssemblies.net35/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LNUXo1dWPYGcSt12ZYCGo7Dwt4Fs64FC0hIdtDw3HkQcBBIQGWQXSSr25PFKIGm/mNeZqkg3BI2YttSia5f2+A==",
+      "path": "jnm2.referenceassemblies.net35/1.0.0",
+      "hashPath": "jnm2.referenceassemblies.net35.1.0.0.nupkg.sha512"
     },
     "ManagedBass/2.0.4": {
       "type": "package",
@@ -2012,26 +1942,26 @@
       "path": "markdig/0.18.3",
       "hashPath": "markdig.0.18.3.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Analyzers/2.9.6": {
+    "Microsoft.CodeAnalysis.Analyzers/3.0.0-beta2.20059.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Kmms3TxGQMNb95Cu/3K+0bIcMnV4qf/phZBLAB0HUi65rBPxP4JO3aM2LoAcb+DFS600RQJMZ7ZLyYDTbLwJOQ==",
-      "path": "microsoft.codeanalysis.analyzers/2.9.6",
-      "hashPath": "microsoft.codeanalysis.analyzers.2.9.6.nupkg.sha512"
+      "sha512": "sha512-Ve2kXanMNVZp1cIoKbflh3RcQgOYLC4UZ23YIMkOnkA6hQjpXsg9NnXbziR2m4i6+WGSz9Wbxp+Tj7XdNRiITw==",
+      "path": "microsoft.codeanalysis.analyzers/3.0.0-beta2.20059.3",
+      "hashPath": "microsoft.codeanalysis.analyzers.3.0.0-beta2.20059.3.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Common/3.4.0": {
+    "Microsoft.CodeAnalysis.Common/3.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3ncA7cV+iXGA1VYwe2UEZXcvWyZSlbexWjM9AvocP7sik5UD93qt9Hq0fMRGk0jFRmvmE4T2g+bGfXiBVZEhLw==",
-      "path": "microsoft.codeanalysis.common/3.4.0",
-      "hashPath": "microsoft.codeanalysis.common.3.4.0.nupkg.sha512"
+      "sha512": "sha512-1CjUHyDxhlwDfUSTOwqbNMZ4rk/Pqs33BupWmun8S/DUOou9mDe+MjapK06WjvuhIEyEr3fzyk0bOIwu0n1RYg==",
+      "path": "microsoft.codeanalysis.common/3.5.0",
+      "hashPath": "microsoft.codeanalysis.common.3.5.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.CSharp/3.4.0": {
+    "Microsoft.CodeAnalysis.CSharp/3.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/LsTtgcMN6Tu1oo7/WYbRAHL4/ubXC/miEakwTpcZKJKtFo7D0AK95Hw0dbGxul6C8WJu60v6NP2435TDYZM+Q==",
-      "path": "microsoft.codeanalysis.csharp/3.4.0",
-      "hashPath": "microsoft.codeanalysis.csharp.3.4.0.nupkg.sha512"
+      "sha512": "sha512-WSMCz5tAtnmEzgmE20J1tjX7chU9HYDfz8AHmWn4Ek+6PPvPZSoo0GDo4Pbnu1FAf4MnNDN6lMd4nqNPuI9V2A==",
+      "path": "microsoft.codeanalysis.csharp/3.5.0",
+      "hashPath": "microsoft.codeanalysis.csharp.3.5.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/2.2.6": {
       "type": "package",
@@ -2040,12 +1970,12 @@
       "path": "microsoft.data.sqlite.core/2.2.6",
       "hashPath": "microsoft.data.sqlite.core.2.2.6.nupkg.sha512"
     },
-    "Microsoft.Diagnostics.Runtime/1.1.61812": {
+    "Microsoft.Diagnostics.Runtime/1.1.116301": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1tbjDlLm/1DRLqBB9T3UZTE+4UT+s93eRlXfY8feMPbA+9boZ5rWMAhJZzcsspfewiTCVp7n1PP06Jd5oYV2Cg==",
-      "path": "microsoft.diagnostics.runtime/1.1.61812",
-      "hashPath": "microsoft.diagnostics.runtime.1.1.61812.nupkg.sha512"
+      "sha512": "sha512-TvCyytE+XdV0inx6VJmEzsRqU3R58kbOV89FSINQgJ7WqWd7AwBCKYiDjknTrC3FxAHg5Broq72lOied4c4wew==",
+      "path": "microsoft.diagnostics.runtime/1.1.116301",
+      "hashPath": "microsoft.diagnostics.runtime.1.1.116301.nupkg.sha512"
     },
     "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
       "type": "package",
@@ -2208,6 +2138,13 @@
       "path": "microsoft.netcore.targets/1.0.1",
       "hashPath": "microsoft.netcore.targets.1.0.1.nupkg.sha512"
     },
+    "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7D2TMufjGiowmt0E941kVoTIS+GTNzaPopuzM1/1LSaJAdJdBrVP0SkZW7AgDd0a2U1DjsIeaKG1wxGVBNLDMw==",
+      "path": "microsoft.netframework.referenceassemblies/1.0.0",
+      "hashPath": "microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512"
+    },
     "NativeLibraryLoader/1.0.10": {
       "type": "package",
       "serviceable": true,
@@ -2236,33 +2173,33 @@
       "path": "nunit/3.12.0",
       "hashPath": "nunit.3.12.0.nupkg.sha512"
     },
-    "ppy.osu.Framework/2020.312.0": {
+    "ppy.osu.Framework/2020.411.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TvwQPGsp7GHGEm8x2UvGPXB6sV6SMtpMC9ZGVsjF3dxuGcHSy6ld7EpfPVjY+uyuABxKwxm3Qtn577tjs1+2yw==",
-      "path": "ppy.osu.framework/2020.312.0",
-      "hashPath": "ppy.osu.framework.2020.312.0.nupkg.sha512"
+      "sha512": "sha512-2JSQLSEoE59i1Qj/wmkfBr+2jaAxM9KGW1nklaRE+3aHzDkxBTH48A+sHWliOY8e2bwiMuBPlDr2Xs088+ifPw==",
+      "path": "ppy.osu.framework/2020.411.0",
+      "hashPath": "ppy.osu.framework.2020.411.0.nupkg.sha512"
     },
-    "ppy.osu.Game/2020.312.0": {
+    "ppy.osu.Game/2020.413.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/RhUETwLZjpan/6Zzgo9WEVzW+Iq/4WSPq/QxTKvavZXPeJBa3OYJ4wu5jN82g2iKrP9QlYIJfLUEqRc+dyiwQ==",
-      "path": "ppy.osu.game/2020.312.0",
-      "hashPath": "ppy.osu.game.2020.312.0.nupkg.sha512"
+      "sha512": "sha512-HPR33W3SzCOASMvAofxGPLYeOFt7JevBnakznAoqwJJ/HSmg2dgjomRtduG5k02q7vZGlasnH1RDD+Ao4ZhqAw==",
+      "path": "ppy.osu.game/2020.413.0",
+      "hashPath": "ppy.osu.game.2020.413.0.nupkg.sha512"
     },
-    "ppy.osu.Game.Resources/2020.304.0": {
+    "ppy.osu.Game.Resources/2020.412.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HZcTgiAdpmplaQH1gm831qgUh7hQ6gPnV6m4libD+ui/jgw+dgJa9z5LaGyJmwEDLw4vj0vKDiCzmvpWzskQEg==",
-      "path": "ppy.osu.game.resources/2020.304.0",
-      "hashPath": "ppy.osu.game.resources.2020.304.0.nupkg.sha512"
+      "sha512": "sha512-7i3nERoiAb6iiWFtprZaXD/QhLrYej225xDnytD1uYiSB8ZMZmBolxzOTiPw0Ga9CTzEqVgf9i1ywsiB3lazqg==",
+      "path": "ppy.osu.game.resources/2020.412.0",
+      "hashPath": "ppy.osu.game.resources.2020.412.0.nupkg.sha512"
     },
-    "ppy.osuTK.NS20/1.0.149": {
+    "ppy.osuTK.NS20/1.0.153": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KXHSFyNn62q64SVowBU+A38aYMUliKFnUef2t8o85LnuRNh84BaR5uyUiPeQa0GKmL/xSoUUlm9XZETnb/O0hA==",
-      "path": "ppy.osutk.ns20/1.0.149",
-      "hashPath": "ppy.osutk.ns20.1.0.149.nupkg.sha512"
+      "sha512": "sha512-+X7sCSGtUrxGj9Ge5GbfBgkVielX2eCTmFUVmdkZX8eRSnCx6rGVX+86VRjJboT3VwFmeYTRMa8n8n17QagQ7A==",
+      "path": "ppy.osutk.ns20/1.0.153",
+      "hashPath": "ppy.osutk.ns20.1.0.153.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
@@ -2278,12 +2215,12 @@
       "path": "runtime.native.system/4.0.0",
       "hashPath": "runtime.native.system.4.0.0.nupkg.sha512"
     },
-    "Sentry/2.1.0": {
+    "Sentry/2.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/KK8HaTyxgUGDltJHLeU/33ntYupY/3ZkmtXQ9Tu8wVP6H6Exkqe3ZbV39EMM9BWu/8eb+epeVe+C8zEJftKLw==",
-      "path": "sentry/2.1.0",
-      "hashPath": "sentry.2.1.0.nupkg.sha512"
+      "sha512": "sha512-meRjG2zD1rh7bL6TJffXRUY4eRZx6oRcKXa9UY3hj1YnflErUJ4Nc1z/9G6kWtq88x8Di8O/iwy/FpaN/8lu3w==",
+      "path": "sentry/2.1.1",
+      "hashPath": "sentry.2.1.1.nupkg.sha512"
     },
     "Sentry.PlatformAbstractions/1.1.0": {
       "type": "package",
@@ -2292,47 +2229,19 @@
       "path": "sentry.platformabstractions/1.1.0",
       "hashPath": "sentry.platformabstractions.1.1.0.nupkg.sha512"
     },
-    "Sentry.Protocol/2.1.0": {
+    "Sentry.Protocol/2.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-k4870NfpTm8FeDt7IgPjkjkRueDKPhmVpwWERLOu2bq2h3qAk1pyjSG8KnhPP+LqgoNnTRnF3Hw2Qk7Vmd+88g==",
-      "path": "sentry.protocol/2.1.0",
-      "hashPath": "sentry.protocol.2.1.0.nupkg.sha512"
+      "sha512": "sha512-w9Es1Ylj+GmuFhPhNae062weYzYGBDlkv93+Bsz9I88Q5zWz5oKq53W92nON54wS8uk7JPNu8c5r0un6a0MnQg==",
+      "path": "sentry.protocol/2.1.1",
+      "hashPath": "sentry.protocol.2.1.1.nupkg.sha512"
     },
-    "SharpCompress/0.24.0": {
+    "SharpCompress/0.25.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3zpUOie9xRrEc6o33Z546rseYttnoxVDMC3wsGYsUa5wXas3wTG96v+dHxcGMCta/Kid9jFIl8/Lc/GbNpKZVA==",
-      "path": "sharpcompress/0.24.0",
-      "hashPath": "sharpcompress.0.24.0.nupkg.sha512"
-    },
-    "SharpDX/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8YA1VFg1/K8Emb8FEZDobojcv1BLuppVo7CRJQEgA1V748VIMPBru0i0OnsCjLSThzTn7juOvH85qjFL9Grl1w==",
-      "path": "sharpdx/4.0.1",
-      "hashPath": "sharpdx.4.0.1.nupkg.sha512"
-    },
-    "SharpDX.D3DCompiler/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-D3OzwToJ8j8dDOeJxUGUxJFwSnTQ89jJejSQkhuIsaBGh8Wd8DhQzmcsKzQaoLnzLBECS1Y37y9bGQaw3CnhxA==",
-      "path": "sharpdx.d3dcompiler/4.0.1",
-      "hashPath": "sharpdx.d3dcompiler.4.0.1.nupkg.sha512"
-    },
-    "SharpDX.Direct3D11/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7xIfeAhxPhbPgSiREfFbOOwIWonUt2GHR7XZN5p2DJMWuqjl0+h1oo2/sF+SH/c6D6APjdbt0J+dYSzoV0PA/w==",
-      "path": "sharpdx.direct3d11/4.0.1",
-      "hashPath": "sharpdx.direct3d11.4.0.1.nupkg.sha512"
-    },
-    "SharpDX.DXGI/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Av/kToUkVR1tDtIP9zmDGwCuCtyL04+PP7kes6aABzky1Y9vT03kR7mDeE83gl+E8GUmMMbVXbQ4AG2CVb66sg==",
-      "path": "sharpdx.dxgi/4.0.1",
-      "hashPath": "sharpdx.dxgi.4.0.1.nupkg.sha512"
+      "sha512": "sha512-sP7lD6xB56CjbEVPGNUkTFoH5bEyumJbakUz8uRIQWioKNLzyBHlFVu/5hdSxjYV01AL0RnYhu8aWNgalTJx+A==",
+      "path": "sharpcompress/0.25.0",
+      "hashPath": "sharpcompress.0.25.0.nupkg.sha512"
     },
     "SharpFNT/1.1.0": {
       "type": "package",
@@ -2579,12 +2488,12 @@
       "path": "system.runtime/4.1.0",
       "hashPath": "system.runtime.4.1.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+    "System.Runtime.CompilerServices.Unsafe/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
-      "path": "system.runtime.compilerservices.unsafe/4.5.2",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+      "sha512": "sha512-IpU1lcHz8/09yDr9N+Juc7SCgNUz+RohkCQI+KsWKR67XxpFr8Z6c8t1iENCXZuRuNCc4HBwme/MDHNVCwyAKg==",
+      "path": "system.runtime.compilerservices.unsafe/4.7.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.1.0": {
       "type": "package",
@@ -2621,12 +2530,12 @@
       "path": "system.text.encoding/4.0.11",
       "hashPath": "system.text.encoding.4.0.11.nupkg.sha512"
     },
-    "System.Text.Encoding.CodePages/4.5.1": {
+    "System.Text.Encoding.CodePages/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
-      "path": "system.text.encoding.codepages/4.5.1",
-      "hashPath": "system.text.encoding.codepages.4.5.1.nupkg.sha512"
+      "sha512": "sha512-aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
+      "path": "system.text.encoding.codepages/4.7.0",
+      "hashPath": "system.text.encoding.codepages.4.7.0.nupkg.sha512"
     },
     "System.Threading/4.0.11": {
       "type": "package",
@@ -2649,40 +2558,12 @@
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
-    "Veldrid/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-9SPpjfDyPD5pd68Gv0XZxCVOeaSgGxsdr2jT+l7YvUJZ+uObgiLKLzDSbRi4zMbJ6atqgsIkkY7H3INGbMzc4A==",
-      "path": "veldrid/4.7.0",
-      "hashPath": "veldrid.4.7.0.nupkg.sha512"
-    },
-    "Veldrid.MetalBindings/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-i9p/eAsEkMPoyNBzz76WrHy2mZXsKyUOjIS3GDrk1C512tillnhtYJ2LDCkwCnM0f9OpGtI9nC3UhDhSXUJt8g==",
-      "path": "veldrid.metalbindings/4.7.0",
-      "hashPath": "veldrid.metalbindings.4.7.0.nupkg.sha512"
-    },
-    "Veldrid.OpenGLBindings/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-PyWk2jyj+VaiWG3rzPtJtgJ18LBKYmShiZRBHrRVPgl7S21GGVt2t/T6ylbER5u5VoMrR87E+RfcJV19S+MuPQ==",
-      "path": "veldrid.openglbindings/4.7.0",
-      "hashPath": "veldrid.openglbindings.4.7.0.nupkg.sha512"
-    },
     "Veldrid.SDL2/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-CMZe8NbkdF+1bEucbrZBHRom0s4scrj/Saz5RFrpoeBA+u43CGT4LAxZuNpvR0PENNdc5sBW3Fq64X4vshYagw==",
       "path": "veldrid.sdl2/4.7.0",
       "hashPath": "veldrid.sdl2.4.7.0.nupkg.sha512"
-    },
-    "Vk/1.0.22": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sVfG2tYyu4k5vkAsn3FcqqW+EL3G0eyLDUsDmMUXuf2puNnhr3z1iA5H0DOzUiYfzRwAeEmPcZNp4pqv8uTvhg==",
-      "path": "vk/1.0.22",
-      "hashPath": "vk.1.0.22.nupkg.sha512"
     }
   }
 }
