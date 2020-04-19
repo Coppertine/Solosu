@@ -9,39 +9,12 @@ using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Solosu
 {
-    
+
     public class SolosuInputManager : RulesetInputManager<SolosuAction>
     {
-        public IEnumerable<SolosuAction> PressedActions => KeyBindingContainer.PressedActions;
-
-        public bool AllowUserPresses
-        {
-            set => ((SolosuKeyBindingContainer)KeyBindingContainer).AllowUserPresses = value;
-        }
-
-        protected override KeyBindingContainer<SolosuAction> CreateKeyBindingContainer(RulesetInfo ruleset, int variant, SimultaneousBindingMode unique)
-            => new SolosuKeyBindingContainer(ruleset, variant, unique);
-
         public SolosuInputManager(RulesetInfo ruleset)
             : base(ruleset, 0, SimultaneousBindingMode.Unique)
         {
-        }
-
-        private class SolosuKeyBindingContainer : RulesetKeyBindingContainer
-        {
-            public bool AllowUserPresses = true;
-
-            public SolosuKeyBindingContainer(RulesetInfo ruleset, int variant, SimultaneousBindingMode unique)
-                : base(ruleset, variant, unique)
-            {
-            }
-
-            protected override bool Handle(UIEvent e)
-            {
-                if (!AllowUserPresses) return false;
-
-                return base.Handle(e);
-            }
         }
     }
 

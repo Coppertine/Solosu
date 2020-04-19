@@ -37,21 +37,35 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
                 Origin = Anchor.Centre,
                 RelativeSizeAxes = Axes.Both,
             });
-            LanePosition.BindValueChanged(e => { this.MoveToX(e.NewValue * SolosuPlayfield.LANE_WIDTH); });
+            
+            LanePosition.BindValueChanged(e =>
+            {
+                this.MoveToX(e.NewValue * SolosuPlayfield.LANE_WIDTH);
+                Logger.Log($"Lane is {e.NewValue}");
+            });
+            Logger.Log("Positon is " + LanePosition.Value * SolosuPlayfield.LANE_WIDTH);
         }
 
         public bool OnPressed(SolosuAction action)
         {
             Logger.LogPrint("Action Pressed");
+
             switch (action)
             {
                 case SolosuAction.LeftButton:
                     moveLane(-1);
+                    Logger.Log("Positon is " + LanePosition.Value * SolosuPlayfield.LANE_WIDTH);
                     return true;
 
                 case SolosuAction.RightButton:
                     moveLane(1);
-                    break;
+                    return true;
+
+                case SolosuAction.Button1:
+                    return true;
+
+                case SolosuAction.Button2:
+                    return true;
             }
 
             return false;
@@ -62,11 +76,10 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
             Logger.LogPrint("Action Pressed");
             moveLane(0);
         }
-        
+
         private void moveLane(int movement)
         {
             LanePosition.Value = movement;
         }
-
     }
 }

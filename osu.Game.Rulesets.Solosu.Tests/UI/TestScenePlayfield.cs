@@ -32,12 +32,12 @@ namespace osu.Game.Rulesets.Solosu.Tests.UI
         {
             //TODO: Add hitobject steps. (e.g. AddStep("Packet"))
 
-            AddStep("Width test 1", () => changePlayfieldSize(1));
-            AddStep("Width test 2", () => changePlayfieldSize(2));
-            AddStep("Width test 3", () => changePlayfieldSize(3));
-            AddStep("Width test 4", () => changePlayfieldSize(4));
-            AddStep("Width test 5", () => changePlayfieldSize(5));
-            AddStep("Reset Width", () => changePlayfieldSize(6));
+            // AddStep("Width test 1", () => changePlayfieldSize(1));
+            // AddStep("Width test 2", () => changePlayfieldSize(2));
+            // AddStep("Width test 3", () => changePlayfieldSize(3));
+            // AddStep("Width test 4", () => changePlayfieldSize(4));
+            // AddStep("Width test 5", () => changePlayfieldSize(5));
+            // AddStep("Reset Width", () => changePlayfieldSize(6));
 
             var controlPointInfo = new ControlPointInfo();
             controlPointInfo.Add(0, new TimingControlPoint());
@@ -59,20 +59,16 @@ namespace osu.Game.Rulesets.Solosu.Tests.UI
                 ControlPointInfo = controlPointInfo
             });
 
-            Add(new SolosuInputManager(new RulesetInfo { ID = 300 })
+            Add(playfieldContainer = new Container
             {
-                RelativeSizeAxes = Axes.Both,
-                Child = playfieldContainer = new Container
+                Anchor = Anchor.Centre,
+                Origin = Anchor.Centre,
+                RelativeSizeAxes = Axes.Y,
+                Width = 768,
+                Children = new[]
                 {
-                    Anchor = Anchor.Centre,
-                    Origin = Anchor.Centre,
-                    RelativeSizeAxes = Axes.Y,
-                    Width = 768,
-                    Children = new[]
-                    {
-                        drawableRuleset = new DrawableSolosuRuleset(new SolosuRuleset(),
-                            beatmap.GetPlayableBeatmap(new SolosuRuleset().RulesetInfo))
-                    }
+                    drawableRuleset = new DrawableSolosuRuleset(new SolosuRuleset(),
+                        beatmap.GetPlayableBeatmap(new SolosuRuleset().RulesetInfo))
                 }
             });
         }
@@ -82,16 +78,16 @@ namespace osu.Game.Rulesets.Solosu.Tests.UI
             double delay = 0;
             //TODO: Add in hitobjects to simulate situation when playfield does change size.
 
-            switch (step)
-            {
-                default:
-                    playfieldContainer.Delay(delay).ResizeTo(new Vector2(rng.Next(25, 400),1), 500);
-                    break;
-
-                case 6:
-                    playfieldContainer.Delay(delay).ResizeTo(new Vector2(SolosuPlayfield.DEFAULT_WIDTH, 1), 500);
-                    break;
-            }
+            // switch (step)
+            // {
+            //     default:
+            //         playfieldContainer.Delay(delay).ResizeTo(new Vector2(rng.Next(25, 400),1), 500);
+            //         break;
+            //
+            //     case 6:
+            //         playfieldContainer.Delay(delay).ResizeTo(new Vector2(SolosuPlayfield.DEFAULT_WIDTH, 1), 500);
+            //         break;
+            // }
         }
     }
 }
