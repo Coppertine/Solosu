@@ -42,7 +42,6 @@ namespace osu.Game.Rulesets.Solosu.UI
                         AutoSizeAxes = Axes.Y,
                         Padding = new MarginPadding
                         {
-
                             Left = LANE_WIDTH / 2,
                             Right = LANE_WIDTH
                         },
