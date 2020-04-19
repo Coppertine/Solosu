@@ -59,16 +59,20 @@ namespace osu.Game.Rulesets.Solosu.Tests.UI
                 ControlPointInfo = controlPointInfo
             });
 
-            Add(playfieldContainer = new Container
+            Add(new SolosuInputManager(new RulesetInfo { ID = 300 })
             {
-                Anchor = Anchor.Centre,
-                Origin = Anchor.Centre,
-                RelativeSizeAxes = Axes.Y,
-                Width = 768,
-                Children = new[] 
+                RelativeSizeAxes = Axes.Both,
+                Child = playfieldContainer = new Container
                 {
-                    drawableRuleset = new DrawableSolosuRuleset(new SolosuRuleset(),
-                        beatmap.GetPlayableBeatmap(new SolosuRuleset().RulesetInfo))
+                    Anchor = Anchor.Centre,
+                    Origin = Anchor.Centre,
+                    RelativeSizeAxes = Axes.Y,
+                    Width = 768,
+                    Children = new[]
+                    {
+                        drawableRuleset = new DrawableSolosuRuleset(new SolosuRuleset(),
+                            beatmap.GetPlayableBeatmap(new SolosuRuleset().RulesetInfo))
+                    }
                 }
             });
         }

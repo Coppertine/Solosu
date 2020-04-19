@@ -7,6 +7,7 @@ using osu.Framework.Graphics;
 using osu.Framework.Graphics.Containers;
 using osu.Framework.Graphics.Shapes;
 using osu.Framework.Input.Bindings;
+using osu.Framework.Logging;
 using osuTK;
 
 namespace osu.Game.Rulesets.Solosu.UI.Packet
@@ -41,6 +42,7 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
 
         public bool OnPressed(SolosuAction action)
         {
+            Logger.LogPrint("Action Pressed");
             switch (action)
             {
                 case SolosuAction.LeftButton:
@@ -57,6 +59,7 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
 
         public void OnReleased(SolosuAction action)
         {
+            Logger.LogPrint("Action Pressed");
             moveLane(0);
         }
         

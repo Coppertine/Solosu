@@ -7,9 +7,9 @@ using osu.Game.Tests.Visual;
 namespace osu.Game.Rulesets.Solosu.Tests
 {
     [TestFixture]
-    public class TestSceneOsuPlayer : PlayerTestScene
+    public class TestSceneSolosuPlayer : PlayerTestScene
     {
-        public TestSceneOsuPlayer()
+        public TestSceneSolosuPlayer()
             : base(new SolosuRuleset())
         {
         }

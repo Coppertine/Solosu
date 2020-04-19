@@ -23,9 +23,11 @@ namespace osu.Game.Rulesets.Solosu.Scoring
 
         protected override DifficultyRange[] GetRanges() => new[]
         {
-            new DifficultyRange(HitResult.Great, 140, 100, 60),
-            new DifficultyRange(HitResult.Good, 200, 150, 100),
-            new DifficultyRange(HitResult.Miss, 400, 400, 400),
+            new DifficultyRange(HitResult.Great, 22.4, 19.4, 13.9),
+            new DifficultyRange(HitResult.Good, 64.0, 49.0, 34.0),
+            new DifficultyRange(HitResult.Ok, 97.0, 82.0, 67.0),
+            new DifficultyRange(HitResult.Meh, sbyte.MaxValue, 112.0, 97.0),
+            new DifficultyRange(HitResult.Miss, 151.0, 136.0, 121.0),
         };
     }
 }

@@ -46,6 +46,6 @@ namespace osu.Game.Rulesets.Solosu.UI
             return null;
         }
 
-        protected override PassThroughInputManager CreateInputManager() => new SolosuInputManager(Ruleset?.RulesetInfo, 0);
+        protected override PassThroughInputManager CreateInputManager() => new SolosuInputManager(Ruleset?.RulesetInfo);
     }
 }
