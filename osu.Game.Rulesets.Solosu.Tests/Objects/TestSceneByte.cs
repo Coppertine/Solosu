@@ -10,12 +10,16 @@ using osu.Game.Tests.Visual;
 namespace osu.Game.Rulesets.Solosu.Tests.Objects
 {
     [TestFixture]
-    public class TestSceneByte : OsuTestScene
+    public class TestSceneByte : PlayerTestScene
     {
         public override IReadOnlyList<Type> RequiredTypes => new[]
         {
             typeof(DrawableByte)
         };
-        
+
+        public TestSceneByte(Ruleset ruleset)
+            : base(ruleset)
+        {
+        }
     }
 }

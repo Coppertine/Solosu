@@ -15,7 +15,7 @@ namespace osu.Game.Rulesets.Solosu.UI
     public class SolosuPlayfield : ScrollingPlayfield
     {
         /// <summary>
-        /// Default height of a <see cref="SolosuPlayfield"/> when inside a <see cref="DrawableSolosuRuleset"/>.
+        /// Default width of a <see cref="SolosuPlayfield"/> when inside a <see cref="DrawableSolosuRuleset"/>.
         /// </summary>
         public const float DEFAULT_WIDTH = 178;
 
@@ -34,8 +34,8 @@ namespace osu.Game.Rulesets.Solosu.UI
                 {
                     RelativeSizeAxes = Axes.Y,
                     AutoSizeAxes = Axes.X,
-                    Anchor = Anchor.BottomCentre,
-                    Origin = Anchor.BottomCentre,
+                    Anchor = Anchor.TopCentre,
+                    Origin = Anchor.TopCentre,
                     Child = new Container
                     {
                         RelativeSizeAxes = Axes.X,

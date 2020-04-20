@@ -37,28 +37,33 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
                 Origin = Anchor.Centre,
                 RelativeSizeAxes = Axes.Both,
             });
-            
+
             LanePosition.BindValueChanged(e =>
             {
                 this.MoveToX(e.NewValue * SolosuPlayfield.LANE_WIDTH);
                 Logger.Log($"Lane is {e.NewValue}");
             });
-            Logger.Log("Positon is " + LanePosition.Value * SolosuPlayfield.LANE_WIDTH);
+            //Logger.Log("Positon is " + LanePosition.Value * SolosuPlayfield.LANE_WIDTH);
         }
+
+        private int heldButton = 0; // -1 = left, 1 = right
 
         public bool OnPressed(SolosuAction action)
         {
             Logger.LogPrint("Action Pressed");
+            if (heldButton != 0 && (action.Equals(SolosuAction.LeftButton) || action.Equals(SolosuAction.RightButton))) return false;
 
             switch (action)
             {
                 case SolosuAction.LeftButton:
                     moveLane(-1);
-                    Logger.Log("Positon is " + LanePosition.Value * SolosuPlayfield.LANE_WIDTH);
+                    heldButton = -1;
+                    //Logger.Log("Positon is " + LanePosition.Value * SolosuPlayfield.LANE_WIDTH);
                     return true;
 
                 case SolosuAction.RightButton:
                     moveLane(1);
+                    heldButton = 1;
                     return true;
 
                 case SolosuAction.Button1:
@@ -73,8 +78,16 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
 
         public void OnReleased(SolosuAction action)
         {
-            Logger.LogPrint("Action Pressed");
-            moveLane(0);
+            // If left button is released while right button is held, the player should move to the right.
+            //Logger.LogPrint("Action Pressed");
+            switch (action)
+            {
+                case SolosuAction.RightButton when heldButton == 1:
+                case SolosuAction.LeftButton when heldButton == -1:
+                    heldButton = 0;
+                    moveLane(0);
+                    break;
+            }
         }
 
         private void moveLane(int movement)
