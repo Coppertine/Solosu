@@ -6,6 +6,7 @@ using osu.Framework.Graphics;
 using osu.Framework.Input.Bindings;
 using osu.Game.Rulesets.Solosu.Objects.Drawables.Pieces;
 using osu.Game.Rulesets.UI.Scrolling;
+using osuTK;
 
 namespace osu.Game.Rulesets.Solosu.Objects.Drawables
 {
@@ -13,12 +14,15 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables
     {
         // TODO: Figure out if skinning is a good thing.
         private readonly BytePiece bytePiece;
+        private BindableInt currentLane;
 
         public DrawableByte(SolosuByteObject hitObject)
             : base(hitObject)
         {
+            Size = new Vector2(80);
             AddInternal(bytePiece = new BytePiece
             {
+                
             });
         }
 

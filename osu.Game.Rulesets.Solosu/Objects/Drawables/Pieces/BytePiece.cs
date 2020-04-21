@@ -19,10 +19,11 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables.Pieces
 
         private void load()
         {
-            Size = new Vector2(80);
+            
 
             Anchor = Anchor.Centre;
             Origin = Anchor.Centre;
+            AutoSizeAxes = Axes.Both;
             innerBox = new Box
             {
                 Size = new Vector2(40),
