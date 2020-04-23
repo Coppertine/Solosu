@@ -17,8 +17,8 @@ namespace osu.Game.Rulesets.Solosu.Tests.Objects
             typeof(DrawableByte)
         };
 
-        public TestSceneByte(Ruleset ruleset)
-            : base(ruleset)
+        public TestSceneByte()
+            : base(new SolosuRuleset())
         {
         }
     }
