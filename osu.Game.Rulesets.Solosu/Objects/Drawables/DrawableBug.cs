@@ -8,8 +8,8 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables
 {
     public class DrawableBug : DrawableSolosuHitObject<SolosuBugObject>
     {
-        public SolosuPacket packet;
-        private SolosuBugObject bugObject;
+        public SolosuPacket Packet;
+        private readonly SolosuBugObject bugObject;
 
         public DrawableBug(SolosuBugObject hitObject)
             : base(hitObject)
@@ -24,7 +24,7 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables
             // just gonna grab from BOSU
             if (timeOffset > 0)
             {
-                if (collidedWithPacket(packet))
+                if (collidedWithPacket(Packet))
                 {
                     ApplyResult(r => r.Type = HitResult.Miss);
                 }
