@@ -23,7 +23,7 @@ namespace osu.Game.Rulesets.Solosu.UI
         public DrawableSolosuRuleset(SolosuRuleset ruleset, IBeatmap beatmap, IReadOnlyList<Mod> mods = null)
             : base(ruleset, beatmap, mods)
         {
-            Direction.Value = ScrollingDirection.Down;
+            Direction.Value = ScrollingDirection.Up;
             TimeRange.Value = 6000;
         }
 

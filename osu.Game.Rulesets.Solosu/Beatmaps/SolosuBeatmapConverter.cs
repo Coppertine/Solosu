@@ -25,7 +25,7 @@ namespace osu.Game.Rulesets.Solosu.Beatmaps
             {
                 Samples = original.Samples,
                 StartTime = original.StartTime,
-                Lane = 1,
+                Lane = 0,
             };
         }
     }

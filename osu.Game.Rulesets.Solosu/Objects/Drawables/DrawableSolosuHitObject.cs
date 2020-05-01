@@ -7,6 +7,7 @@ using osu.Framework.Bindables;
 using osu.Framework.Graphics;
 using osu.Game.Rulesets.Objects.Drawables;
 using osu.Game.Rulesets.Scoring;
+using osu.Game.Rulesets.Solosu.UI;
 using osu.Game.Rulesets.UI.Scrolling;
 using osuTK.Graphics;
 
@@ -29,6 +30,8 @@ namespace osu.Game.Rulesets.Solosu.Objects.Drawables
         public DrawableSolosuHitObject(SolosuHitObject hitObject)
             : base(hitObject)
         {
+            Origin = Anchor.Centre;
+            X = hitObject.Lane * SolosuPlayfield.LANE_WIDTH;
         }
 
         [BackgroundDependencyLoader(true)]

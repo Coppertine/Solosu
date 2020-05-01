@@ -80,13 +80,10 @@ namespace osu.Game.Rulesets.Solosu.UI.Packet
         {
             // If left button is released while right button is held, the player should move to the right.
             //Logger.LogPrint("Action Pressed");
-            switch (action)
+            if ((action == SolosuAction.RightButton && heldButton == 1) || (action == SolosuAction.LeftButton && heldButton == -1))
             {
-                case SolosuAction.RightButton when heldButton == 1:
-                case SolosuAction.LeftButton when heldButton == -1:
-                    heldButton = 0;
-                    moveLane(0);
-                    break;
+                heldButton = 0;
+                moveLane(0);
             }
         }
 
